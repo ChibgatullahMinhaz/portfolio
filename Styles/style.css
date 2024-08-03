@@ -87,15 +87,15 @@ text-shadow: 1px 1px  1px var(--blackColor);
 
 /* nav start here */
 nav{
-    margin-top: 1.4rem;
+    margin: 1.4rem 0rem 1rem 0rem;
     padding:  0rem 3rem 0rem 3rem;
 }
 .breanding a{
-    text-transform: uppercase;
+    text-transform: lowercase;
     font-family: var(--PlayfaiFont);
     font-weight: bolder;
     font-size: 1.5rem;
-    text-shadow: 1px 1px  1px #fff;
+    text-shadow: 1px 1px  1px var(--secondaryColor);
 }
 .breanding a span{
     color: var(--secondaryColor);
