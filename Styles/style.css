@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,400;0,700;0,900;1,900&display=swap');
+
+/* Variable start  */
+:root{
+    --primaryColor: #111122;
+    --secondaryColor:#F8B90C;
+    --normalColor:#fff;
+    --blackColor:#13131a;
+    --dangerColor:#f75842;
+    --border:0.1rem solid rgba(255,255,255,0.3);
+    --boxShadow: 2px  #fff;
+
+    --container-width-lg:80%;
+    --container-width-md:90%;
+    --container-width-sm:94%;
+    
+
+
+    --PlayfaiFont:"Playfair Display", serif;
+    --poppinsFont:"Poppins", sans-serif;
+    --robotoFont:"Roboto", sans-serif;
+
+}
+.favicon{
+    background-color: #fff;
+}
+/* variable ends */
+/* Reset code start */
+*{
+    font-family: var(--popinFont);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline-offset: none;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    text-transform: capitalize;
+    transition: all 0.4s linear;
+    scroll-behavior: smooth;
+    color: var(--normalColor);
+}
+::-webkit-scrollbar{
+    width: 7px;
+}
+::-webkit-scrollbar-track{
+    background: var(--normalColor);
+}
+::-webkit-scrollbar-thumb{
+    background: var(--blackColor);
+}
+::-webkit-scrollbar-thumb:hover{
+    background: var(--secondaryColor);
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: var(--primaryColor);
+}
+.btn{
+    font-family: var(--poppinsFont);
+    font-weight: 600;
+    font-size: .9rem;
+    background-color: var(--primaryColor);
+    color:var(--normalColor) ;
+    padding: .6rem 1rem;
+    border-radius: 4rem 4rem 4rem 4rem;
+    transition: all 0.3s linear ;
+    cursor: pointer;
+}
+.btn:hover{
+background-color: var(--secondaryColor);
+box-shadow: var(--boxShadow);
+text-shadow: 1px 1px  1px var(--blackColor);
+}
+.flex-space-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .flex-space-around {
+    display: flex;
+    justify-content: space-around;
+  }
+/*  reset code ends*/
+
+/* nav start here */
+nav{
+    margin-top: 1.4rem;
+    padding:  0rem 3rem 0rem 3rem;
+}
+.breanding a{
+    text-transform: uppercase;
+    font-family: var(--PlayfaiFont);
+    font-weight: bolder;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px  1px #fff;
+}
+.breanding a span{
+    color: var(--secondaryColor);
+    text-shadow: 1px 1px  1px var(--secondaryColor);
+    font-size: 2rem;
+}
+nav ul :last-child .nav_link {
+    background-color: var(--secondaryColor);
+    text-shadow: 1px 1px  1px var(--blackColor);
+}
+nav ul :last-child .nav_link:hover {
+    background-color: var(--secondaryColor);
+    text-shadow: 1px 1px  1px var(--normalColor);
+}
+.nav_list{
+    margin-right: 1.2rem;
+}
+/* nav ends here */
