@@ -10,6 +10,7 @@
     --border:1px solid  #5662f6;
     --boxShadow: 0 0.2em 1.5em rgba(240, 232, 7, 0.7);
     --textShadow: 0 0.1em 1.5em  rgba(128, 124, 250, 0.7);
+    --footerColor:#1C222A;
 
     --container-width-lg:85%;
     --container-width-md:95%;
@@ -300,4 +301,25 @@ padding-bottom: 2.5rem;
 .typring_about{
     font-size: 1.2rem;
     color: #52c2f9;
+}
+/* about me ends */
+
+/* footer start here */
+footer{
+    background: var(--footerColor);
+    max-width: 100%;
+    min-height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+.connect_me a{
+    margin: .3rem;
+    box-shadow: var(--boxShadow);
+    background: transparent;
+}
+.connect_me a:hover{
+    box-shadow: var(--boxShadow);
+   
 }
