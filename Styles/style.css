@@ -198,15 +198,11 @@ line-height: 3.5rem;
     margin-bottom: 3rem;
 }
 .intro_text p{
-font-family: var(--robotoFont);
+font-family: 'Times New Roman', Times, serif;
 font-size: .9rem;
 line-height: 1.3rem;
-font-weight: normal;
-}
-.intro_text span{
-    background:linear-gradient(-25deg, #d5d5c5 0%, #0efd0a 80%);
-    color: transparent;
-    background-clip: text;
+color: #7fffd4;
+text-shadow: var(--textShadow);
 }
 .header_left a{
  background-color: var(--secondaryColor);
@@ -228,11 +224,10 @@ background:linear-gradient(-50deg,#111122  0%, #111122 100%);
   border-radius: 0.5rem;
 }
 header::before{
-content: "Web Developer";
-color: var(--blackColor);
+content: " ";
 position: absolute;
-background:linear-gradient(-25deg, #4955f3 0%,  #7fffd4 80%, #1e063e 100%);
-min-width:100%;
+background: var(--primaryColor);
+width:100%;
 height: 5rem;
 bottom: 0;
 margin-bottom: -3.1rem;
@@ -240,5 +235,11 @@ z-index: 99;
 transform: skewY(-2deg);
 transform-origin: left;
 box-shadow: var(--textShadow);
+}
+.typing{
+    background:linear-gradient(-25deg, #2230e8 0%, #32f5b4 80%);
+    color: transparent;
+    background-clip: text;
+    font-weight: 500;
 }
 /* header ends here  */
