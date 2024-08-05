@@ -577,6 +577,69 @@ animation: animate 1s cubic-bezier(1,0,0.5,1) forwards ;
 .box_border:hover{
     border: var(--border);
 }
+/*contact section ends here */
+/* Say Hello Sections */
+.connect_me_section{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3rem;
+    padding: 2rem 0;
+    margin-bottom: 3rem;
+    min-width: 90%;
+}
+.contact_container{
+    min-width: 100%;
+    box-shadow: var(--textShadow);
+    padding: 1.3rem;
+    border-radius: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+.contact_img img{
+    min-width: 90%;
+    border-radius: 2rem;
+    opacity: 0.8;
+}
+form h2{
+    margin-bottom: .8rem;
+}
+label {
+    margin-top: .7rem;
+}
+
+textarea {
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #F8B90C !important;
+    border-radius: 4px;
+    outline: none;
+    box-shadow: var(--textShadow);
+    color: rgb(236, 220, 220);
+    background: var(--footerColor);
+}
+.contact_container input{
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #F8B90C !important;
+    border-radius: 4px;
+    outline: none;
+    box-shadow: var(--textShadow);
+    color: #fff;
+    background: var(--footerColor); 
+}
+button{
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+   color: white;
+    cursor: pointer;
+    box-shadow: var(--textShadow);
+    border: none !important;
+}
+
   /* footer start here */
 footer{
     background: var(--footerColor);
@@ -596,3 +659,13 @@ footer{
     box-shadow: var(--boxShadow);
 }
 /* footer ends here */
+
+
+/* responsiveness starts here*/
+@media screen and (max-width: 480px) {
+     footer{
+      min-width: 100%;
+      display: flex;
+      flex-direction: column;
+     }
+    }
