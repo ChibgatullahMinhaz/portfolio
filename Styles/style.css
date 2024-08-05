@@ -522,9 +522,7 @@ animation: animate 1s cubic-bezier(1,0,0.5,1) forwards ;
     100%{
         opacity: 1;
     }
-} {
-    
-}
+} 
 .progress-line.html span::after{
     content: "85%";
 }
@@ -555,7 +553,7 @@ animation: animate 1s cubic-bezier(1,0,0.5,1) forwards ;
 .progress-line.figma_psd span::after{
     content: "90%";
 }
-
+/* skills section ends here */
   /* footer start here */
 footer{
     background: var(--footerColor);
