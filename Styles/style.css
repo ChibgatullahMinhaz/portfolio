@@ -61,6 +61,9 @@ body{
     margin: 0 auto;
     inset: 0;
 }
+.title{
+    font-size: 2rem;
+}
 img{
     width: 100%;
     display: block;
@@ -344,6 +347,7 @@ padding-bottom: 2.5rem;
   .card{
     background: var(--footerColor);
     box-shadow: var(--boxShadow);
+    border-radius: 1.5rem;
   }
   .card:hover{
     cursor: pointer;
@@ -557,6 +561,22 @@ animation: animate 1s cubic-bezier(1,0,0.5,1) forwards ;
     content: "90%";
 }
 /* skills section ends here */
+/* contact section */
+.contact_sections{
+    text-align: center;
+}
+.cbox{
+    padding: 1.5rem;
+}
+.cbox i{
+    color: var(--secondaryColor);
+}
+.box_border{
+    border: 1px solid var(--secondaryColor);
+}
+.box_border:hover{
+    border: var(--border);
+}
   /* footer start here */
 footer{
     background: var(--footerColor);
