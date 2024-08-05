@@ -320,7 +320,6 @@ padding-bottom: 2.5rem;
 }
 /* about me ends */
 /* service section  */
-
   .service_heading{
     text-align: center;
     line-height: 2.5rem;
@@ -341,11 +340,15 @@ padding-bottom: 2.5rem;
     padding: 2rem 0;
     align-items: center;
     justify-content: center;
-   background: var(--blackColor);
   }
   .card{
     background: var(--footerColor);
-    box-shadow: var(--textShadow);
+    box-shadow: var(--boxShadow);
+  }
+  .card:hover{
+    cursor: pointer;
+    box-shadow:var(--textShadow) ;
+    transform: scale(1.1);
   }
   .sbox{
     padding: 1.5rem;
@@ -384,10 +387,10 @@ padding-bottom: 2.5rem;
    border-radius: 1rem ; 
    opacity: .8;
    box-shadow: var(--textShadow);
+   max-width: 90%;
 }
 .skills_img img:hover {
 box-shadow:0 0.2em 1.5em rgba(236, 241, 240, 0.7);
-transform: scale(.9);
 }
 
 .border_buttom{
