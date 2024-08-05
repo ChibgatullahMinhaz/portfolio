@@ -68,13 +68,13 @@
         <img src="../images/contact.jpg" alt="contact me">
     </div>
     <div class="container contact_container">
-        <form id="contactForm">
+        <form id="contactForm" onsubmit="showAlart(event)">
             <h2>Contact Us</h2>
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+            <input type="text" id="name" name="name" placeholder="Enter Your Name" >
             
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter Your" required>
+            <input type="email" id="email" name="email" placeholder="Enter Your" >
             
             <label for="message">Message:</label>
             <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter your message"></textarea>
