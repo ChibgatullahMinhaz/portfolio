@@ -9,11 +9,3 @@ var typed = new Typed(".typring_about", {
     backSpeed:70,
 })
 
-
-// contact message
-const showAlart=(event)=>{
-event.preventDefault();
-alert("Thank you for messaging")
-console.log()
-}
-showAlart()
