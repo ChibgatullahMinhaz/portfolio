@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,400;0,700;0,900;1,900&display=swap');
+
+/* Variable start  */
+:root{
+    --primaryColor: #111122;
+    --secondaryColor:#F8B90C;
+    --normalColor:#fff;
+    --blackColor:#13131a;
+    --dangerColor:#f75842;
+    --border:1px solid  #5662f6;
+    --boxShadow: 0 0.2em 1.5em rgba(240, 232, 7, 0.7);
+    --textShadow: 0 0.1em 1.5em  rgba(128, 124, 250, 0.7);
+    --footerColor:#1C222A;
+
+    --container-width-lg:85%;
+    --container-width-md:90%;
+    --container-width-sm:94%;
+    
+
+
+    --PlayfaiFont:"Playfair Display", serif;
+    --poppinsFont:"Poppins", sans-serif;
+    --robotoFont:"Roboto", sans-serif;
+
+}
+/* variable ends */
+/* Reset code start */
+*{
+    font-family: var(--popinFont);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline-offset: none;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    text-transform: capitalize;
+    transition: all 0.4s linear;
+    scroll-behavior: smooth;
+    color: var(--normalColor);
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background: var(--normalColor);
+}
+::-webkit-scrollbar-thumb{
+    background: var(--blackColor);
+}
+::-webkit-scrollbar-thumb:hover{
+    background: var(--secondaryColor);
+}
+html{
+    scroll-behavior: smooth;
+}
+.Pcards{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+    align-items: center;
+    justify-content: center;
+  }
+  .Pcard{
+    background: var(--footerColor);
+    box-shadow: var(--boxShadow);
+    border-radius: 1.5rem;
+  }
+  .Pcard:hover{
+    cursor: pointer;
+    box-shadow:var(--textShadow) ;
+  }
+  .sbox{
+    padding: 1.5rem;
+  }
+  .sbox img:hover{
+    transform: scale(1.1);
+    border-radius: 1rem;
+  }
+  .sbox i{
+    color: var(--secondaryColor);
+    font-size: 2rem;
+  }
+.sbox h3{
+    font-family: var(--PlayfaiFont);
+    font-weight: bolder;
+}
+.sbox p{
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+}
+.see_more a{
+    color: var(--dangerColor);
+    font-family: var(--poppinsFont);
+    font-weight: 600;
+}
+.see_more a i{
+    font-size: .9rem;
+    color: var(--dangerColor);
+    margin-left: 1rem;
+}

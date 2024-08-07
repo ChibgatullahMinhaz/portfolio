@@ -5,21 +5,22 @@
 
 # Portpolio preview
 
-## Nab and Header add
+## Home page
 
 ### ![alt text](portfolio/Preview/navHeader.png)
 
-## about section preview
+## about me
 
 ### ![alt text](portfolio/Preview/about.png)
 
-## service 
+## what i do 
 
 ### ![alt text](portfolio/Preview/service.png)
-
-## how to contact me
-### ![alt text](portfolio/Preview/ctact.png)
 
 ## what have my skills 
 
 ### ![alt text](portfolio/Preview/skills.png)
+
+## how to contact me
+
+### ![alt text](portfolio/Preview/ctact.png)
