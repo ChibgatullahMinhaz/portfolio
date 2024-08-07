@@ -39,22 +39,26 @@
     scroll-behavior: smooth;
     color: var(--normalColor);
 }
-::-webkit-scrollbar{
-    width: 10px;
-}
-::-webkit-scrollbar-track{
-    background: var(--normalColor);
-}
-::-webkit-scrollbar-thumb{
+body{
     background: var(--blackColor);
-}
-::-webkit-scrollbar-thumb:hover{
-    background: var(--secondaryColor);
 }
 html{
     scroll-behavior: smooth;
 }
-.Pcards{
+.portfolio_heading{
+    text-align: center;
+    line-height: 2.5rem;
+  }
+  .portfolio_title{
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 3.5rem;
+  }
+  .portfolio_sub_title{
+    color: var(--secondaryColor);
+    font-size: 1rem;
+  }
+.Glary{
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 2rem;
@@ -62,33 +66,25 @@ html{
     align-items: center;
     justify-content: center;
   }
-  .Pcard{
+  .glary_image{
     background: var(--footerColor);
     box-shadow: var(--boxShadow);
     border-radius: 1.5rem;
+    padding: 1rem;
+    overflow: hidden;
+    object-fit: cover;
   }
-  .Pcard:hover{
+  .glary_image:hover{
     cursor: pointer;
     box-shadow:var(--textShadow) ;
   }
-  .sbox{
-    padding: 1.5rem;
+
+  .glary_image img:hover{
+    transform: scale(1.2);
   }
-  .sbox img:hover{
-    transform: scale(1.1);
-    border-radius: 1rem;
-  }
-  .sbox i{
-    color: var(--secondaryColor);
-    font-size: 2rem;
-  }
-.sbox h3{
+.glary_image h3{
     font-family: var(--PlayfaiFont);
     font-weight: bolder;
-}
-.sbox p{
-    line-height: 1.5rem;
-    margin-bottom: 1rem;
 }
 .see_more a{
     color: var(--dangerColor);
