@@ -26,19 +26,31 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- add css fils -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
 
     <title>Chibgatullah Minhaz portfolio</title>
 </head>
 
 <body>
     <!-- start nav bar -->
-    <nav class="container nav_container ">
+   
+
+    <button class="btn open"  id="open_menu">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <button class="btn closed"  id="close_menu">
+        <i class="fa-solid fa-xmark" ></i>
+    </button>
+
+    <nav class="container nav_container"  id="navMenu" >
+
         <a href="#" class="breanding">
             <h3> Chibgatullah<span>.</span></h3>
         </a>
 
 
-        <ul class="flex-space-between"">
+        <ul class="flex-space-between"  >
             <li class=" nav_list">
             <a href="#" class="nav_link btn">Home </a>
             </li>
@@ -58,14 +70,8 @@
                 <a href="contact.html" class="nav_link btn">Say Hello </a>
             </li>
         </ul>
+    
 
-        <button class="btn" id="open_menu">
-            <i class="fa-solid fa-bars"></i>
-        </button>
-
-        <button class="btn" id="close_menu">
-            <i class="fa-solid fa-xmark"></i>
-        </button>
     </nav>
     <!-- ends nav bar -->
 
@@ -105,7 +111,8 @@
 
             <div class="about_text">
                 <div class="text">
-                    <h3> Hey There! </h3> My Name is Chibgatullah and i'm a <span class="typring_about"></span></div>
+                    <h3> Hey There! </h3> My Name is Chibgatullah and i'm a <span class="typring_about"></span>
+                </div>
                 <p>I'm Running Student in CST(Computer science and technology). I'm a Professional MERN Stack Developer. I am experienced in the web development field and i have more than 1.5+ years of experience in web development field. My Expertise lies in creating high-quality, clean, and responsive web applications from scratch😊</p>
                 <a href="#" download="cv.pdf" class="btn">Download CV</a>
             </div>

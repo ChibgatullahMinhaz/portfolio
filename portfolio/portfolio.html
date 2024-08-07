@@ -14,11 +14,21 @@
     <!-- add css fils -->
 <link rel="stylesheet" href="style.css">   
 <link rel="stylesheet" href="portpolio.css">
+<link rel="stylesheet" href="responsive.css">
     <title>Portfolio - Chibgatullah minhaz </title>
 </head>
 <body>
  <!-- start nav bar -->
- <nav class="flex-space-between container">
+ <button class="btn open"  id="open_menu">
+    <i class="fa-solid fa-bars"></i>
+</button>
+
+<button class="btn closed"  id="close_menu">
+    <i class="fa-solid fa-xmark" ></i>
+</button>
+
+
+ <nav class="flex-space-between container" id="navMenu">
     <a href="#" class="breanding">
         <h3> Chibgatullah<span>.</span></h3>
     </a>
@@ -45,14 +55,7 @@
         </li>
     </ul>
 
-    <button class="btn" id="open_menu">
-        <i class="fa-solid fa-bars"></i>
-    </button>
-
-    <button class="btn" id="close_menu">
-        <i class="fa-solid fa-xmark"></i>
-    </button>
-
+  
 </nav>
 <!-- ends nav bar -->
 <main>
@@ -123,5 +126,6 @@
     </div>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>

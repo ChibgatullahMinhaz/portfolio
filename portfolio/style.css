@@ -158,9 +158,6 @@ nav ul :last-child .nav_link:hover {
 .nav_list{
     margin-right: .5rem;
 }
-nav button{
-    display: none;
-}
 /* nav ends here */
 /* header starts here  */
 header{
