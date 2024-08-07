@@ -24,32 +24,34 @@
 <body>
      <!-- start nav bar -->
 
+   
      <button class="btn open"  id="open_menu">
         <i class="fa-solid fa-bars"></i>
     </button>
-    
+
     <button class="btn closed"  id="close_menu">
         <i class="fa-solid fa-xmark" ></i>
     </button>
 
-    
-     <nav class="flex-space-between container">
+    <nav class="container nav_container"  id="navMenu" >
+
         <a href="#" class="breanding">
             <h3> Chibgatullah<span>.</span></h3>
         </a>
 
-        <ul class="flex-space-between"">
+
+        <ul class="flex-space-between"  >
             <li class=" nav_list">
-            <a href="index.html" class="nav_link btn">Home </a>
+            <a href="#" class="nav_link btn">Home </a>
             </li>
             <li class="nav_list">
-                <a href="index.html" class="nav_link btn">About me </a>
+                <a href="#about" class="nav_link btn">About me </a>
             </li>
             <li class="nav_list">
-                <a href="index.html" class="nav_link btn">service</a>
+                <a href="#service" class="nav_link btn">service</a>
             </li>
             <li class="nav_list">
-                <a href="index.html" class="nav_link btn">skills</a>
+                <a href="#skills" class="nav_link btn">skills</a>
             </li>
             <li class="nav_list">
                 <a href="portfolio.html" class="nav_link btn">portfolio</a>
@@ -58,6 +60,7 @@
                 <a href="contact.html" class="nav_link btn">Say Hello </a>
             </li>
         </ul>
+    
 
     </nav>
     <!-- ends nav bar -->
@@ -111,7 +114,24 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        const openBtn = document.getElementById('open_menu');
+const closeBtn = document.getElementById('close_menu');
+const navMenu = document.getElementById('navMenu');
+
+openBtn.addEventListener('click', () => {
+    openBtn.style.display = 'none';
+    closeBtn.style.display = 'inline-block';
+    navMenu.style.display = 'block';
+});
+
+closeBtn.addEventListener('click', () => {
+    closeBtn.style.display = 'none';
+    openBtn.style.display = 'inline-block';
+    openBtn.style.boxShadow = 'var(--boxShadow)'
+    navMenu.style.display = 'none';
+});
+    </script>
 
 </body>
 </html>

@@ -9,6 +9,7 @@ var typed = new Typed(".typring_about", {
     backSpeed:70,
 })
 
+// nav responsive code 
 const openBtn = document.getElementById('open_menu');
 const closeBtn = document.getElementById('close_menu');
 const navMenu = document.getElementById('navMenu');
