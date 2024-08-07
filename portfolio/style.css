@@ -578,6 +578,10 @@ animation: animate 1s cubic-bezier(1,0,0.5,1) forwards ;
 /*contact section ends here */
 /* Say Hello Sections */
 .connect_me_section{
+    display: flex;
+    flex-direction: column;
+}
+.contact_main_container{
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 3rem;
@@ -586,8 +590,7 @@ animation: animate 1s cubic-bezier(1,0,0.5,1) forwards ;
     min-width: 90%;
 }
 .contact_container{
-    min-width: 100%;
-    box-shadow: var(--textShadow);
+    width: 100%;
     padding: 1.3rem;
     border-radius: 2rem;
 }
@@ -595,6 +598,9 @@ animation: animate 1s cubic-bezier(1,0,0.5,1) forwards ;
 form {
     display: flex;
     flex-direction: column;
+}
+.contact_img{
+    width: 100%;
 }
 .contact_img img{
     min-width: 90%;
@@ -614,7 +620,6 @@ textarea {
     border: 1px solid #F8B90C !important;
     border-radius: 4px;
     outline: none;
-    box-shadow: var(--textShadow);
     color: rgb(236, 220, 220);
     background: var(--footerColor);
 }
@@ -624,7 +629,6 @@ textarea {
     border: 1px solid #F8B90C !important;
     border-radius: 4px;
     outline: none;
-    box-shadow: var(--textShadow);
     color: #fff;
     background: var(--footerColor); 
 }
