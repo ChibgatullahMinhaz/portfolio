@@ -66,18 +66,54 @@
     <!-- ends nav bar -->
 <!-- contact section starts here -->
  <section class="container connect_me_section">
- <h1 style="text-align: center; font-size: 3rem;color: yellowgreen; line-height: 0rem;">Contact</h1>
- <h5 style="text-align: center; line-height: 0rem; color: bisque;">let's Talk about ideas</h5>
+ <h1 class="contact_title" >Contact</h1>
+ <h5 class="contact_sub_title">let's Talk about ideas</h5>
     
  
  <div class="contact_main_container">
    
- <div class="contact_img">
-        <img src="images/contact.jpg" alt="contact me">
+ <div class="contact_info">
+        <img src="images/hanshake.jpg" alt="contact me">
+        <h1 class="info_title" >chibgatullah minhaz</h1>
+        <h3>web developer(MERN)</h3>
+        <p>Are You Looking For Your Business Online Presence?
+            don't hesitate for contact me. i am available here🙂
+        </p>
 
+        <article>
+            <address style="display: flex;">
+                <div class="icon_info">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="add_info">
+                    <h1>Address</h1>
+                    <p>chittagong bangladesh</p>
+                </div>
+            </address>
+
+            <address style="display: flex;">
+                <div class="icon_info" style="display: flex; flex-direction: column;">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="add_info">
+                    <h1>Freelancer</h1>
+                    <p>available right now</p>
+                </div>
+            </address>
+
+            <address style="display: flex;">
+                <div class="icon_info" style="display: flex; flex-direction: column;">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="add_info">
+                    <h1>Email</h1>
+                    <p>chibgatullahminhaz@gmail.com</p>
+                </div>
+            </address>
+        </article>
 
     </div>
-    <div class="container contact_container">
+    <div class="contact_input">
         <form id="contactForm">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" placeholder="Enter Your Name" >
@@ -129,7 +165,7 @@
         </div>
     </footer>
 
-    <script>
+<script>
         const openBtn = document.getElementById('open_menu');
 const closeBtn = document.getElementById('close_menu');
 const navMenu = document.getElementById('navMenu');
@@ -146,7 +182,7 @@ closeBtn.addEventListener('click', () => {
     openBtn.style.boxShadow = 'var(--boxShadow)'
     navMenu.style.display = 'none';
 });
-    </script>
-
+    
+</script> 
 </body>
 </html>
