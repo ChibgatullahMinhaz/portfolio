@@ -113,6 +113,28 @@ border:var(--border);
     align-items: center;
     text-align: center;
   }
+
+/* animated buttun starts here */
+#animated-button { 
+    transition: all 0.8s ease-in;
+}
+
+#animated-button:active {
+    background: linear-gradient(50deg, #55e455, #8631be);
+    animation: gradient-animation 1s infinite;
+}
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/* animated buttun ends here */
 /*  reset code ends*/
 
 /* nav start here */
@@ -383,19 +405,44 @@ padding-bottom: 2.5rem;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2rem;
-    padding: 1rem 0;
-    align-items: center;
+    padding: 1rem 0;    
 }
-.skills_img img{
-   border-radius: 1rem ; 
-   opacity: .8;
-   box-shadow: var(--textShadow);
-   max-width: 95%;
+.skills_info{
+    width: 100%;
 }
-.skills_img img:hover {
-box-shadow:0 0.2em 1.5em rgba(236, 241, 240, 0.7);
+.skills_info h1{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    line-height: 6rem;
+    margin-top: -1.6rem;
+    color: aliceblue;
+    text-shadow: var(--whiteShadow);
 }
-
+.skills_info article{
+    margin-top: 2rem;
+    line-height: 2rem;
+}
+.webDesign_skills{
+    margin-bottom: 1.7rem;
+}
+.webDesign_skills h3{
+    color: var(--secondaryColor);
+    font-size: 1.4rem;
+}
+.webdevelopment_skills{
+    margin-bottom: 1.7rem;
+}
+.webdevelopment_skills h3{
+    color: var(--secondaryColor);
+    font-size: 1.4rem;
+}
+.mern_skills h3{
+    color: var(--secondaryColor);
+    font-size: 1.4rem;
+}
+.mern_skills{
+    margin-bottom: 3rem;
+}
 .border_buttom{
     color: var(--secondaryColor);
     text-transform: uppercase;
@@ -655,13 +702,14 @@ textarea {
     color: #fff;
     background: var(--footerColor); 
 }
-button{
+.button{
     margin-top: 20px;
     padding: 10px;
     border: none;
    color: white;
     cursor: pointer;
     box-shadow: var(--textShadow);
+    text-align: center;
     border: none !important;
 }
 
