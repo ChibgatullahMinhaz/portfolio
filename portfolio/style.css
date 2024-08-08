@@ -642,11 +642,15 @@ line-height: 3rem;
 color: var(--secondaryColor);
 }
 .contact_main_container{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3rem;
+    padding: 2rem 0;
+    align-items: center;
+    justify-content: center;
 }
 .contact_info img{
-width: 100%;
+width: 75%;
 }
 .contact_info h1{
     margin: .5rem;
@@ -659,7 +663,7 @@ width: 100%;
     line-height: 3rem;
 }
 .contact_info p{
-    font-style: .5rem;
+    font-size: .8rem;
 }
 .icon_info{
     display: flex; 

@@ -21,6 +21,10 @@
 
 ### ![alt text](portfolio/Preview/skills.png)
 
+## portfolio
+
+### ![alt text](portfolio/Preview/portfolio.png)
+
 ## how to contact me
 
 ### ![alt text](portfolio/Preview/ctact.png)
