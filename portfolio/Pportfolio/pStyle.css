@@ -1,0 +1,25 @@
+.project_container{
+    display: flex;
+    flex-direction: column;
+
+}
+.project_img{
+    margin: 0 auto;
+}
+.project_img img{
+    width: 80%;
+    margin: 4rem;
+}
+.about_text {
+    font-size: 2rem;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+.about_text p{
+    text-align: justify;
+    line-height: 3rem;
+}
+.about_text a{
+    padding: 1rem;
+}
