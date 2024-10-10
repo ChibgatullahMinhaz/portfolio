@@ -16,6 +16,8 @@
 <link rel="stylesheet" href="responsive.css">
 <link rel="stylesheet" href="portpolio.css">
     <title>Portfolio - Chibgatullah minhaz </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
 </head>
 <body>
  <!-- start nav bar -->
@@ -69,7 +71,7 @@
         </div>
         <div class="Glary">
 
-            <div class="glary_image">
+            <div class="glary_image"   data-aos="fade-right"  data-aos-duration="2000">
                    <img src="./projects/newspaperhome.png" alt="easybank">
                     <h3>newspaperhome page</h3>
                     <div class="see_more">
@@ -78,7 +80,7 @@
             </div>
 
             
-            <div class="glary_image">
+            <div class="glary_image"  data-aos="fade-up-right"  data-aos-duration="2000">
                 <img src="./projects/shortly.png" alt="shortly">
                  <h3>manage-landing</h3>
                  <div class="see_more">
@@ -87,7 +89,7 @@
          </div>
 
 
-         <div class="glary_image">
+         <div class="glary_image"   data-aos="fade-left"  data-aos-duration="2000">
             <img src="./projects/easybank.jpg" alt="easybank">
              <h3>easybank</h3>
              <div class="see_more">
@@ -134,6 +136,7 @@
         <p>© All Rights Reserved 2024 | Chibgatullah Minhaz</p>
     </div>
 </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
 
 <script>
@@ -153,6 +156,7 @@ closeBtn.addEventListener('click', () => {
     openBtn.style.boxShadow = 'var(--boxShadow)'
     navMenu.style.display = 'none';
 });
+      AOS.init();
 </script>
 </body>
 </html>
