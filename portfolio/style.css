@@ -18,7 +18,6 @@
     --container-width-sm:94%;
     
 
-
     --PlayfaiFont:"Playfair Display", serif;
     --poppinsFont:"Poppins", sans-serif;
     --robotoFont:"Roboto", sans-serif;
@@ -41,16 +40,20 @@
     color: var(--normalColor);
 }
 ::-webkit-scrollbar{
-    width: 10px;
+    width: 16px;
 }
 ::-webkit-scrollbar-track{
     background: var(--normalColor);
 }
 ::-webkit-scrollbar-thumb{
     background: var(--blackColor);
+    transition: all 1s ease-in;
+
 }
 ::-webkit-scrollbar-thumb:hover{
     background: var(--secondaryColor);
+    transition: all 0.8s ease-in;
+
 }
 html{
     scroll-behavior: smooth;
