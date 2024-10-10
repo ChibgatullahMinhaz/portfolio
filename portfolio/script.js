@@ -25,3 +25,5 @@ closeBtn.addEventListener('click', () => {
     openBtn.style.boxShadow = 'var(--boxShadow)'
     navMenu.style.display = 'none';
 });
+// aos for (animation of Scroll)
+AOS.init();

@@ -166,8 +166,6 @@ nav{
 .breanding h3:hover{
     text-shadow: var(--textShadow);
     background: transparent;
-    transform: rotateX(360deg);
-    transition-delay: 0.2s;
 }
 .breanding h3 span{
     color: var(--secondaryColor);
