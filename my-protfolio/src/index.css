@@ -1,0 +1,63 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,400;0,700;0,900;1,900&display=swap');
+:root{
+    --primaryColor: #111122;
+    --secondaryColor:#F8B90C;
+    --blackColor:#13131a;
+    --dangerColor:#f75842;
+    --border:1px solid  #5662f6;
+    --boxShadow: 0 0.2em 1.5em rgba(240, 232, 7, 0.7);
+    --textShadow: 0 0.1em 1.5em  rgba(128, 124, 250, 0.7);
+    --whiteShadow: 0 0.1em 1.5em  #fff;
+    --footerColor:#1C222A;
+    --PlayfairFont:"Playfair Display", serif;
+    --poppinsFont:"Poppins", sans-serif;
+    --robotoFont:"Roboto", sans-serif;
+    --normalColor:#fff;
+}
+
+*{
+    background-color: #13131a;
+    font-family: var(--poppinsFont);
+    box-sizing: border-box;
+    outline-offset: none;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    text-transform: capitalize;
+    transition: all 0.4s linear;
+    scroll-behavior: smooth;
+    color: var(--normalColor);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: var(--primaryColor);
+    color: var(--normalColor);
+    margin: 0 auto;
+    inset: 0;
+}
+
+.buttonDesign{
+    font-family: var(--poppinsFont);
+    font-weight: 600;
+    font-size: .9rem;
+    background-color: var(--secondaryColor);
+    color:var(--normalColor) ;
+    padding: .6rem 1rem;
+    border-radius: 4rem 4rem 4rem 4rem;
+    transition: all 0.3s linear ;
+    cursor: pointer;
+
+    border:1px solid var(--primaryColor);
+}
+.buttonDesign:hover{
+background-color: var(--secondaryColor);
+box-shadow: var(--boxShadow);
+background:linear-gradient(-50deg,#111122  0%, #111122 100%);
+border:var(--border);
+}
