@@ -12,6 +12,7 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.1.4",
     "@tsparticles/react": "^3.0.0",
+    "aos": "^2.3.4",
     "firebase": "^11.7.1",
     "framer-motion": "^12.10.3",
     "react": "^19.0.0",
@@ -20,6 +21,7 @@
     "react-loading-indicators": "^1.0.1",
     "react-router": "^7.5.2",
     "react-simple-typewriter": "^5.0.1",
+    "react-toastify": "^11.0.5",
     "react-tsparticles": "^2.12.2",
     "tailwindcss": "^4.1.4",
     "tsparticles": "^2.11.1"

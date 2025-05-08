@@ -6,6 +6,8 @@ import { useEffect, useState } from "react";
 import { Atom } from "react-loading-indicators";
 import { motion } from "framer-motion";
 import ParticlesBackground from "./Components/ParticlesBackground";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -30,6 +32,12 @@ function App() {
     return () => clearTimeout(timer);
   }, [location]);
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,     
+    });
+  }, []);
   return (
     < >
      

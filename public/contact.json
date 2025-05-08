@@ -1,0 +1,24 @@
+[
+    {
+      "title": "Chibgatullah Minhaz",
+      "sub": "Web Developer (MERN)",
+      "icon": "fa-solid fa-laptop-code",
+      "link": "https://github.com/chibgatullahminhaz",
+      "animation": "zoom-in"
+    },
+    {
+      "title": "Freelance",
+      "sub": "Available Right Now​",
+      "icon": "fa-solid fa-user",
+      "link": "https://www.fiverr.com/chibgatullah_?up_rollout=true",
+      "animation": "flip-left"
+    },
+    {
+      "title": "Email",
+      "sub": "chibgatullahminhaz@gmail.com​",
+      "icon": "fa-solid fa-envelope",
+      "link": "mailto:chibgatullahminhaz@email.com",
+      "animation": "zoom-in"
+    }
+  ]
+  

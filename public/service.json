@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Web Design",
+        "icon": "fa-solid fa-code",
+        "desc": "I’m a website designer who is passionate about making error-free fully responsive Conversion PSD or Figma to HTML."
+    },
+    {
+        "title": "Front-End Developer",
+        "icon": "fa-solid fa-laptop-code",
+        "desc": "I’m a Front-End Web Developer who is passionate about making error-free websites using HTML, CSS, Bootstrap, JS, React."
+    },
+    {
+        "title": "Web Development",
+        "icon": "fa-solid fa-laptop-code",
+        "desc": "I’m a Web Developer who is passionate about making error-free websites with HTML, CSS, JS, MongoDB, Node, Express, ReactJS."
+    },
+    {
+        "title": "MERN Development",
+        "icon": "fa-duotone fa-solid fa-laptop-code",
+        "desc": "I’m a MERN Stack Web Developer who is passionate about making error-free websites with MongoDB, Node, Express, ReactJS."
+    },
+    {
+        "title": "PSD To HTML",
+        "icon": "fa-solid fa-file-code",
+        "desc": "I’m a Web Designer who is passionate about fully responsive PSD to HTML conversion with HTML, CSS, JS."
+    },
+    {
+        "title": "Figma To HTML",
+        "icon": "fa-brands fa-figma",
+        "desc": "I’m a Web Designer who is passionate about fully responsive conversion with HTML, CSS, JS and 100% client satisfaction."
+    }
+]

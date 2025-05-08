@@ -204,80 +204,10 @@ padding-bottom: 2.5rem;
 } */
 /* about me ends */
 /* service section  */
-  /* .service_heading{
-    text-align: center;
-    line-height: 2.5rem;
-  }
-  .service_title{
-    text-transform: uppercase;
-    font-weight: bolder;
-    font-size: 3.6rem;
-  }
-  .service_sub_title{
-    color: var(--secondaryColor);
-    font-size: 1rem;
-  }
-  .cards{
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 2rem;
-    padding: 2rem 0;
-    align-items: center;
-    justify-content: center;
-  }
-  .card{
-    background: var(--footerColor);
-    box-shadow: var(--boxShadow);
-    border-radius: 1.5rem;
-  }
-  .card:hover{
-    cursor: pointer;
-    box-shadow:var(--textShadow) ;
-    transform: scale(1.1);
-  }
-  .sbox{
-    padding: 1.5rem;
-  }
-  .sbox i{
-    color: var(--secondaryColor);
-    font-size: 2rem;
-  }
-.sbox h3{
-    font-family: var(--PlayfaiFont);
-    font-weight: bolder;
-}
-.sbox p{
-    line-height: 1.5rem;
-    margin-bottom: 1rem;
-}
-.see_more a{
-    color: var(--dangerColor);
-    font-family: var(--poppinsFont);
-    font-weight: 600;
-}
-.see_more a i{
-    font-size: .9rem;
-    color: var(--dangerColor);
-    margin-left: 1rem;
-} */
-
+  /* 
+ 
 /* skills section ends here */
-/* contact section */
-/* .contact_sections{
-    text-align: center;
-} */
-/* .cbox{
-    padding: 1.5rem;
-}
-.cbox i{
-    color: var(--secondaryColor);
-}
-.box_border{
-    border: 1px solid var(--secondaryColor);
-}
-.box_border:hover{
-    border: var(--border);
-} */
+
 /*contact section ends here */
 /* Say Hello Sections */
 /* .connect_me_section{

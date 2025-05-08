@@ -27,12 +27,15 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 body {
   background-color: var(--primaryColor);
   color: var(--normalColor);
   margin: 0 auto;
   inset: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 .min {
   min-height: calc(100vh - 200px);
@@ -49,7 +52,7 @@ footer {
   color: var(--normalColor);
   padding: 0.6rem 1rem;
   border-radius: 4rem 4rem 4rem 4rem;
-  transition: all 0.3s linear;
+  transition: all 0.5s linear;
   cursor: pointer;
   border: 1px solid var(--secondaryColor);
 }
@@ -68,7 +71,7 @@ footer {
   color: var(--normalColor);
   padding: 0.6rem 1rem;
   border-radius: 4rem 4rem 4rem 4rem;
-  transition: all 0.3s linear;
+  transition: all 0.5s linear;
   cursor: pointer;
   border: 1px solid var(--secondaryColor);
 }
@@ -77,6 +80,7 @@ footer {
   box-shadow: var(--boxShadow);
   background: linear-gradient(-50deg, #111122 0%, #111122 100%);
   border: var(--border);
+  
 }
 .active {
   background-color: var(--secondaryColor);
@@ -126,3 +130,67 @@ footer {
   background-clip: text;
   line-height: 3.5rem;
 }
+
+.service_heading {
+  text-align: center;
+  line-height: 2.5rem;
+}
+.service_title{
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 3.6rem;
+  }
+  .service_sub_title{
+    color: var(--secondaryColor);
+    font-size: 1rem;
+  }
+ 
+  .card{
+    background: var(--footerColor);
+    box-shadow: var(--boxShadow);
+    border-radius: 1.5rem;
+    cursor: pointer;
+  }
+  .card:hover{
+   
+    box-shadow:var(--textShadow) ;
+    transform: scale(1.1);
+  }
+  .sbox{
+    padding: 1.5rem;
+  }
+  .sbox i{
+    color: var(--secondaryColor);
+    font-size: 2rem;
+  }
+.sbox h3{
+    font-family: var(--PlayfaiFont);
+    font-weight: bolder;
+}
+.sbox p{
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+}
+.see_more a{
+    color: var(--dangerColor);
+    font-family: var(--poppinsFont);
+    font-weight: 600;
+}
+.see_more a i{
+    font-size: .9rem;
+    color: var(--dangerColor);
+    margin-left: 1rem;
+}
+ .contact_sections{
+    text-align: center;
+}
+
+.cbox i{
+    color: var(--secondaryColor);
+}
+.box_border{
+    border: 1px solid var(--secondaryColor);
+}
+.box_border:hover{
+    border: var(--border);
+} 
