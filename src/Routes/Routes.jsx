@@ -5,6 +5,7 @@ import { Portfolio } from "../Pages/Portfolio/Portfolio";
 import { Details } from "../Pages/Details/Details";
 import { Contact } from "../Pages/ContactMe/Contact";
 import { About } from "../Pages/About/About";
+import NotFoundPage from "../Pages/Error/NotFoundPage";
 
 export const router = createBrowserRouter([
   {
@@ -29,9 +30,13 @@ export const router = createBrowserRouter([
         Component: Details,
       },
       {
-        path: "/contact-me",
+        path: "/contact",
         Component: Contact,
       },
     ],
   },
+  {
+    path: "*",
+    element : <NotFoundPage></NotFoundPage>
+  }
 ]);

@@ -1,7 +1,10 @@
-import React from 'react'
+import React from "react";
+import Banner from "../../Components/Banner";
 
 export const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <div className="px-4">
+      <Banner />
+    </div>
+  );
+};

@@ -1,63 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,400;0,700;0,900;1,900&display=swap");
 @import "tailwindcss";
 @plugin "daisyui";
-
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,400;0,700;0,900;1,900&display=swap');
-:root{
-    --primaryColor: #111122;
-    --secondaryColor:#F8B90C;
-    --blackColor:#13131a;
-    --dangerColor:#f75842;
-    --border:1px solid  #5662f6;
-    --boxShadow: 0 0.2em 1.5em rgba(240, 232, 7, 0.7);
-    --textShadow: 0 0.1em 1.5em  rgba(128, 124, 250, 0.7);
-    --whiteShadow: 0 0.1em 1.5em  #fff;
-    --footerColor:#1C222A;
-    --PlayfairFont:"Playfair Display", serif;
-    --poppinsFont:"Poppins", sans-serif;
-    --robotoFont:"Roboto", sans-serif;
-    --normalColor:#fff;
+:root {
+  --primaryColor: #111122;
+  --secondaryColor: #f8b90c;
+  --blackColor: #13131a;
+  --dangerColor: #f75842;
+  --border: 1px solid #5662f6;
+  --boxShadow: 0 0.2em 1.5em rgba(240, 232, 7, 0.7);
+  --textShadow: 0 0.1em 1.5em rgba(128, 124, 250, 0.7);
+  --whiteShadow: 0 0.1em 1.5em #fff;
+  --footerColor: #1c222a;
+  --PlayfairFont: "Playfair Display", serif;
+  --poppinsFont: "Poppins", sans-serif;
+  --robotoFont: "Roboto", sans-serif;
+  --normalColor: #fff;
 }
 
-*{
-    background-color: #13131a;
-    font-family: var(--poppinsFont);
-    box-sizing: border-box;
-    outline-offset: none;
-    border: none;
-    text-decoration: none;
-    list-style: none;
-    text-transform: capitalize;
-    transition: all 0.4s linear;
-    scroll-behavior: smooth;
-    color: var(--normalColor);
+* {
+  font-family: var(--poppinsFont);
+  box-sizing: border-box;
+  text-transform: capitalize;
+  transition: all 0.4s linear;
+  scroll-behavior: smooth;
 }
 
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
-body{
-    background-color: var(--primaryColor);
-    color: var(--normalColor);
-    margin: 0 auto;
-    inset: 0;
+body {
+  background-color: var(--primaryColor);
+  color: var(--normalColor);
+  margin: 0 auto;
+  inset: 0;
+}
+.min {
+  min-height: calc(100vh - 200px);
+}
+nav,
+footer {
+  background: var(--primaryColor);
+  z-index: 999;
+}
+.buttonDesign {
+  font-family: var(--poppinsFont);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--normalColor);
+  padding: 0.6rem 1rem;
+  border-radius: 4rem 4rem 4rem 4rem;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  border: 1px solid var(--secondaryColor);
+}
+.buttonDesign:hover {
+  background-color: var(--secondaryColor);
+  box-shadow: var(--boxShadow);
+  background: linear-gradient(-50deg, #111122 0%, #111122 100%);
+  border: var(--border);
 }
 
-.buttonDesign{
-    font-family: var(--poppinsFont);
-    font-weight: 600;
-    font-size: .9rem;
-    background-color: var(--secondaryColor);
-    color:var(--normalColor) ;
-    padding: .6rem 1rem;
-    border-radius: 4rem 4rem 4rem 4rem;
-    transition: all 0.3s linear ;
-    cursor: pointer;
-
-    border:1px solid var(--primaryColor);
+.hireButtonDesign {
+  font-family: var(--poppinsFont);
+  font-weight: 600;
+  font-size: 0.9rem;
+  background-color: var(--secondaryColor);
+  color: var(--normalColor);
+  padding: 0.6rem 1rem;
+  border-radius: 4rem 4rem 4rem 4rem;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  border: 1px solid var(--secondaryColor);
 }
-.buttonDesign:hover{
-background-color: var(--secondaryColor);
-box-shadow: var(--boxShadow);
-background:linear-gradient(-50deg,#111122  0%, #111122 100%);
-border:var(--border);
+.hireButtonDesign:hover {
+  background-color: var(--secondaryColor);
+  box-shadow: var(--boxShadow);
+  background: linear-gradient(-50deg, #111122 0%, #111122 100%);
+  border: var(--border);
+}
+.active {
+  background-color: var(--secondaryColor);
+  box-shadow: var(--boxShadow);
+  background: linear-gradient(-50deg, #111122 0%, #111122 100%);
+  border: var(--border);
+}
+
+.circle-icon:hover {
+  background-color: var(--secondaryColor);
+  box-shadow: var(--boxShadow);
+  background: linear-gradient(-50deg, #111122 0%, #111122 100%);
+}
+.LeftSideIcon:hover {
+  box-shadow: var(--boxShadow);
+  background: none;
+  background-color: none;
+}
+
+.intro_text {
+  margin-bottom: 3rem;
+}
+.intro_text p {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 0.9rem;
+  line-height: 1.3rem;
+  color: #7fffd4;
+  text-shadow: var(--textShadow);
+}
+
+.text_1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 3.5rem;
+}
+.text_2 {
+  font-size: 2.3rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+  line-height: 3.5rem;
+}
+.text_2 span {
+  font-weight: bolder;
+  text-transform: uppercase;
+  background: linear-gradient(-25deg, #5662f6 0%, #7fffd4 80%);
+  color: transparent;
+  background-clip: text;
+  line-height: 3.5rem;
 }
