@@ -3,9 +3,9 @@ import App from "../App";
 import { Home } from "../Pages/Home/Home";
 import { Portfolio } from "../Pages/Portfolio/Portfolio";
 import { Details } from "../Pages/Details/Details";
-import { Contact } from "../Pages/ContactMe/Contact";
 import { About } from "../Pages/About/About";
 import NotFoundPage from "../Pages/Error/NotFoundPage";
+import Contact from "../Pages/ContactMe/Contact";
 
 export const router = createBrowserRouter([
   {
@@ -31,7 +31,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/contact",
-        Component: Contact,
+        Component: Contact ,
       },
     ],
   },
