@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { toast } from "react-toastify";
+import { Link } from "react-router";
 
 const fadeVariants = {
   hidden: { opacity: 0, scale: 0.8 },
@@ -12,6 +13,7 @@ const ContactSection = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    
     try {
       setLoading(true);
       fetch("/contact.json")
@@ -40,7 +42,7 @@ const ContactSection = () => {
           Contact
         </h1>
         <h5
-          className="text-lg text-gray-600"
+          className="text-lg "
           data-aos="fade-left"
           data-aos-duration="2000"
         >
@@ -66,7 +68,7 @@ const ContactSection = () => {
                 className={`${contact.icon} text-3xl text-indigo-500 mb-4`}
               ></i>
               <h3 className="text-xl font-semibold mb-1">{contact.title}</h3>
-              <p className="text-gray-600">{contact.sub}</p>
+              <p className="text-gray-600 line-clamp-1">{contact.sub}</p>
             </div>
           </motion.a>
         ))}

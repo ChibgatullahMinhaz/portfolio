@@ -187,6 +187,9 @@ footer {
 
 .cbox i{
     color: var(--secondaryColor);
+    text-align: center;
+    text-shadow: var(--textShadow);
+
 }
 .box_border{
     border: 1px solid var(--secondaryColor);

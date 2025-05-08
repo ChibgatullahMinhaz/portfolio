@@ -35,11 +35,11 @@ const ServiceSection = () => {
 
   return (
     <section className="mt-20 ">
-      <div className="">
-        <h1 className="" data-aos="fade-right" data-aos-duration="2000">
+      <div className="my-10">
+        <h1 className="text-center font-extrabold text-4xl" data-aos="fade-right" data-aos-duration="2000">
           What I Do
         </h1>
-        <h5 className="service_sub_title" data-aos="fade-left" data-aos-duration="2000">
+        <h5 className="service_sub_title text-center" data-aos="fade-left" data-aos-duration="2000">
           My Services
         </h5>
       </div>
