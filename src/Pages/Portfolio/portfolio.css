@@ -23,50 +23,19 @@
 
 }
 /* variable ends */
-/* Reset code start */
-*{
-    font-family: var(--popinFont);
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline-offset: none;
-    border: none;
-    text-decoration: none;
-    list-style: none;
-    text-transform: capitalize;
-    transition: all 0.4s linear;
-    scroll-behavior: smooth;
-    color: var(--normalColor);
-}
-body{
-    background: var(--blackColor);
-}
+
+
 html{
     scroll-behavior: smooth;
 }
-.portfolio_heading{
-    text-align: center;
-    line-height: 2.5rem;
-  }
-  .portfolio_title{
-    text-transform: uppercase;
-    font-weight: bolder;
-    font-size: 3.5rem;
-  }
+
+ 
   .portfolio_sub_title{
     color: var(--secondaryColor);
     font-size: 1rem;
   }
-.Glary{
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 2rem;
-    padding: 2rem 0;
-    align-items: center;
-    justify-content: center;
-  }
+
   .glary_image{
-    background: var(--footerColor);
     box-shadow: var(--boxShadow);
     border-radius: 1.5rem;
     padding: 1rem;
@@ -78,9 +47,7 @@ html{
     box-shadow:var(--textShadow) ;
   }
 
-  .glary_image img:hover{
-    transform: scale(1.2);
-  }
+  
 .glary_image h3{
     font-family: var(--PlayfaiFont);
     font-weight: bolder;
