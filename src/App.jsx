@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import ParticlesBackground from "./Components/ParticlesBackground";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Helmet } from "react-helmet";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -40,7 +41,18 @@ function App() {
   }, []);
   return (
     < >
-     
+      <Helmet>
+        <title>Home - Chibgatullah Minhaz</title>
+        <meta
+          name="description"
+          content="This is a portfolio website. This website is Chibgatullah Minhaz"
+        />
+        <link
+          rel="shortcut icon"
+          href="ch_favLogo.png"
+          type="image/x-icon"
+        />
+      </Helmet>
       {loading ? (
         <div className="flex items-center justify-center min-h-screen">
           <Atom

@@ -54,7 +54,7 @@ const MinddlePart = () => {
         transition={{ delay: 0.8 }}
         className='flex gap-4 my-4'
       >
-        <Link to={`/`} className="btn hireButtonDesign animate-bounce">
+        <Link to={`/contact`} className="btn hireButtonDesign animate-bounce">
           Contact Me
         </Link>
         <Link to={`/`} className="btn buttonDesign animate-bounce">

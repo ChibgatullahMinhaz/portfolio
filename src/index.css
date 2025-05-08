@@ -146,13 +146,12 @@ footer {
   }
  
   .card{
-    background: var(--footerColor);
+    /* background: var(--footerColor); */
     box-shadow: var(--boxShadow);
     border-radius: 1.5rem;
     cursor: pointer;
   }
   .card:hover{
-   
     box-shadow:var(--textShadow) ;
     transform: scale(1.1);
   }

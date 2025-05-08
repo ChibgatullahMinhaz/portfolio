@@ -1,8 +1,24 @@
 import React from "react";
 import FadeInUp from "../../Components/FadeInUp";
-
+import { Helmet } from "react-helmet";
+import contactimage from '../../assets/hanshake.jpg'
 const Contact = () => {
   return (
+
+    <>
+     <Helmet>
+        <title>Contact Me - Chibgatullah Minhaz</title>
+        <meta
+          name="description"
+          content="This is a portfolio website. This website is Chibgatullah Minhaz"
+        />
+        <link
+          rel="shortcut icon"
+          href="ch_favLogo.png"
+          type="image/x-icon"
+        />
+      </Helmet>
+    
     <section className="container mx-auto px-4 py-12 connect_me_section">
       {/* Title */}
       <FadeInUp index={1}>
@@ -19,9 +35,9 @@ const Contact = () => {
         <div className="contact_info flex-1 text-center lg:text-left space-y-6">
           <FadeInUp index={2}>
             <img
-              src="/images/hanshake.jpg"
+              src={contactimage}
               alt="contact me"
-              className="mx-auto lg:mx-0 w-60 h-auto rounded-xl shadow-lg"
+              className="mx-auto lg:mx-0 max-w-full h-auto rounded-xl shadow-lg"
             />
           </FadeInUp>
 
@@ -144,6 +160,7 @@ const Contact = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

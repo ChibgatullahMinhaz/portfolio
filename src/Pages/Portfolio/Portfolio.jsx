@@ -42,7 +42,7 @@ export const Portfolio = () => {
         />
         <link
           rel="shortcut icon"
-          href="./images/ch_favLogo.png"
+          href="ch_favLogo.png"
           type="image/x-icon"
         />
       </Helmet>
@@ -51,7 +51,6 @@ export const Portfolio = () => {
       <main>
         <section >
           <motion.div
-            className="portfolio_heading"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
