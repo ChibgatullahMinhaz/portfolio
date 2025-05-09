@@ -9,7 +9,6 @@ const ParticlesBackground = () => {
 
   return (
     <Particles
-      id="tsparticles"
       init={particlesInit}
       options={{
         fpsLimit: 60,

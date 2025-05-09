@@ -3,7 +3,6 @@ import { Link } from 'react-router';
 import { motion, AnimatePresence } from 'framer-motion';
 import { toast } from 'react-toastify';
 import { Atom } from "react-loading-indicators";
-import { FaLaptopCode } from "react-icons/fa";
 
 const ServiceSection = () => {
   const [services, setServices] = useState([]);
@@ -45,19 +44,12 @@ const ServiceSection = () => {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {loading ?
-           <Atom
-           color={["#00FFFF", "#B0E0E6", "#ADD8E6", "#FFFFFF"]}
-           size="large"
-           text="Loading..."
-           textColor="#F8B90C"
-         />
-          :
+       
 
           <AnimatePresence>
           {services.map((service) => (
             <motion.div
-              className="card"
+              className="card bg-[#1c222a] hover:transition-all"
               key={service.title}
               variants={fadeVariants}
               initial="hidden"
@@ -81,7 +73,7 @@ const ServiceSection = () => {
             </motion.div>
           ))}
         </AnimatePresence>
-        }
+        
 
 
       </div>

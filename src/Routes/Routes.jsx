@@ -6,6 +6,7 @@ import { Details } from "../Pages/Details/Details";
 import { About } from "../Pages/About/About";
 import NotFoundPage from "../Pages/Error/NotFoundPage";
 import Contact from "../Pages/ContactMe/Contact";
+import ServiceSection from "../Components/ServiceSection";
 
 export const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ export const router = createBrowserRouter([
       {
         path: "/about",
         Component: About,
+      },
+      {
+        path: "/service",
+        element: <ServiceSection></ServiceSection>
       },
       {
         path: "/portfolio",

@@ -23,7 +23,7 @@ export const Home = () => {
     <div className="px-4">
       <Banner />
       <RecentProject />
-      <ServiceSection />
+      
       <ContactSection />
     </div>
     </>
