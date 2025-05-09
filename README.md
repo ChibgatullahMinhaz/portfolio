@@ -1,12 +1,30 @@
-# React + Vite
+# Chibtatullah minhaz Portfolio website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## [live link] (https://chibgatullahminhazportfolio.vercel.app)
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Portpolio preview
 
-## Expanding the ESLint configuration
+## Home page
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### ![alt text](portfolio/Preview/navHeader.png)
+
+## about me
+
+### ![alt text](portfolio/Preview/about.png)
+
+## what i do 
+
+### ![alt text](portfolio/Preview/service.png)
+
+## what have my skills 
+
+### ![alt text](portfolio/Preview/skills.png)
+
+## portfolio
+
+### ![alt text](portfolio/Preview/portfolio.png)
+
+## how to contact me
+
+### ![alt text](portfolio/Preview/ctact.png)
