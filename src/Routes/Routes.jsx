@@ -2,8 +2,8 @@ import { createBrowserRouter } from "react-router";
 import App from "../App";
 import { Home } from "../Pages/Home/Home";
 import { Portfolio } from "../Pages/Portfolio/Portfolio";
-import { Details } from "../Pages/Details/Details";
-import { About } from "../Pages/About/About";
+import Details from "../Pages/Details/Details";
+import About from "../Pages/About/About";
 import NotFoundPage from "../Pages/Error/NotFoundPage";
 import Contact from "../Pages/ContactMe/Contact";
 import ServiceSection from "../Components/ServiceSection";
@@ -24,7 +24,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/service",
-        element: <ServiceSection></ServiceSection>
+        element: <ServiceSection></ServiceSection>,
       },
       {
         path: "/portfolio",
@@ -36,12 +36,12 @@ export const router = createBrowserRouter([
       },
       {
         path: "/contact",
-        Component: Contact ,
+        Component: Contact,
       },
     ],
   },
   {
     path: "*",
-    element : <NotFoundPage></NotFoundPage>
-  }
+    element: <NotFoundPage></NotFoundPage>,
+  },
 ]);

@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
 import "./portfolio.css";
 import { toast } from "react-toastify";
 import { Link } from "react-router";
+import { Atom } from "react-loading-indicators";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -15,13 +16,15 @@ const fadeInUp = {
 };
 
 export const Portfolio = () => {
-  const [portfolio, setPortfolio] = React.useState([]);
-  const [loading, setLoading] = React.useState(true);
+  const [portfolio, setPortfolio] = useState([]);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     const loadPortfolio = async () => {
       try {
         setLoading(true);
-        const response = await fetch("./portfolio.json");
+        const response = await fetch(
+          "https://portfolio-server-side-mu.vercel.app/projects/all"
+        );
         const data = await response.json();
         setPortfolio(data);
       } catch (error) {
@@ -32,6 +35,7 @@ export const Portfolio = () => {
     };
     loadPortfolio();
   }, []);
+  console.log(portfolio);
   return (
     <>
       <Helmet>
@@ -40,16 +44,12 @@ export const Portfolio = () => {
           name="description"
           content="This is a portfolio website. This website is Chibgatullah Minhaz"
         />
-        <link
-          rel="shortcut icon"
-          href="ch_favLogo.png"
-          type="image/x-icon"
-        />
+        <link rel="shortcut icon" href="ch_favLogo.png" type="image/x-icon" />
       </Helmet>
 
       {/* Portfolio Section */}
       <main>
-        <section >
+        <section>
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -57,34 +57,45 @@ export const Portfolio = () => {
             variants={fadeInUp}
             custom={1}
           >
-           <div className="text-center my-5 space-y-4">
-           <h1 className="text-center text-3xl text-shadow-2xs text-[#F8B90C] md:text-5xl">My Portfolio</h1>
-           <h5 className="portfolio_sub_title">Recent work</h5>
-           </div>
+            <div className="text-center my-5 space-y-4">
+              <h1 className="text-center text-3xl text-shadow-2xs text-[#F8B90C] md:text-5xl">
+                My Portfolio
+              </h1>
+              <h5 className="portfolio_sub_title">Recent work</h5>
+            </div>
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {loading
-              ? "loading..."
-              : portfolio.map((item, idx) => (
-                  <motion.div
-                    key={idx}
-                    className="glary_image"
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    variants={fadeInUp}
-                    custom={idx + 2}
-                  >
-                    <img src={item.img} alt={item.title} />
-                    <h3>{item.title}</h3>
-                    <div className="see_more">
-                      <Link to={`/portfolio-details/${item.id}`}>
-                        See more <i className="fa-solid fa-arrow-right"></i>
-                      </Link>
-                    </div>
-                  </motion.div>
-                ))}
+            {loading ? (
+              <div className="col-end-3 flex items-center justify-center">
+                <Atom
+                  color={["#00FFFF", "#B0E0E6", "#ADD8E6", "#FFFFFF"]}
+                  size="large"
+                  text="Loading..."
+                  textColor="#F8B90C"
+                />
+              </div>
+            ) : (
+              portfolio.map((item, idx) => (
+                <motion.div
+                  key={idx}
+                  className="glary_image"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={fadeInUp}
+                  custom={idx + 2}
+                >
+                  <img src={item?.screenshots[0]} alt={item.title} />
+                  <h3>{item?.remaining?.title}</h3>
+                  <div className="see_more">
+                    <Link to={`/portfolio-details/${item._id}`}>
+                      See more <i className="fa-solid fa-arrow-right"></i>
+                    </Link>
+                  </div>
+                </motion.div>
+              ))
+            )}
           </div>
         </section>
       </main>
