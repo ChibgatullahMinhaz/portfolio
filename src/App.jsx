@@ -9,6 +9,7 @@ import ParticlesBackground from "./Components/ParticlesBackground";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Helmet } from "react-helmet";
+import ScrollToTopButton from "./Components/ScrollToTopButton";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -41,6 +42,7 @@ function App() {
   }, []);
   return (
     < >
+        <ScrollToTopButton />
       <Helmet>
         <title>Home - Chibgatullah Minhaz</title>
         <meta
