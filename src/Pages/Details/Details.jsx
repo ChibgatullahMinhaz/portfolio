@@ -147,24 +147,24 @@ const Details = () => {
           {/* Buttons */}
           <div className="flex flex-wrap gap-4 mt-4">
             {liveLink && (
-              <a
-                href={liveLink}
+              <Link
+                to={liveLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded shadow"
               >
                 Live Site
-              </a>
+              </Link>
             )}
             {githubLink && (
-              <a
-                href={githubLink}
+              <Link
+                to={githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gray-800 hover:bg-black text-white px-4 py-2 rounded shadow"
               >
                 GitHub Repo
-              </a>
+              </Link>
             )}
           </div>
         </div>
