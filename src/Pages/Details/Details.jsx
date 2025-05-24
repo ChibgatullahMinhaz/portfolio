@@ -59,7 +59,7 @@ const Details = () => {
         Go Back
       </Link>
      </div>
-      <section className="max-w-11/12 mx-auto px-4 py-12 grid grid-cols-1 sm:grid-cols-2 item-center justify-center gap-x-5">
+      <section className="max-w-11/12 mx-auto px-4 py-12 grid grid-cols-1  item-center justify-center gap-x-5">
 
         {/* Left: Screenshot & Title */}
         <div>
