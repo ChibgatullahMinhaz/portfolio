@@ -181,5 +181,4 @@ const InfoItem = ({ label, value, isList }) => (
     </div>
   </div>
 );
-
 export default Details;

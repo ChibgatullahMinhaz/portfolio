@@ -17,7 +17,10 @@ const fadeInUp = {
 
 export const Portfolio = () => {
   const [portfolio, setPortfolio] = useState([]);
+  const [filteredPortfolio, setFilteredPortfolio] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [searchQuery, setSearchQuery] = useState("");
+
   useEffect(() => {
     const loadPortfolio = async () => {
       try {
@@ -27,6 +30,7 @@ export const Portfolio = () => {
         );
         const data = await response.json();
         setPortfolio(data);
+        setFilteredPortfolio(data);
       } catch (error) {
         toast.error("Error fetching portfolio data:", error);
       } finally {
@@ -35,7 +39,18 @@ export const Portfolio = () => {
     };
     loadPortfolio();
   }, []);
-  console.log(portfolio);
+
+useEffect(() => {
+  const filtered = portfolio.filter((item) =>
+    item?.remaining?.title?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    item?.techStack?.some((tec) =>
+      tec.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+  );
+  setFilteredPortfolio(filtered);
+}, [searchQuery, portfolio]);
+
+console.log(portfolio);
   return (
     <>
       <Helmet>
@@ -62,10 +77,17 @@ export const Portfolio = () => {
                 My Portfolio
               </h1>
               <h5 className="portfolio_sub_title">Recent work</h5>
+              <input
+                type="text"
+                placeholder="Search by title & TeachStack......"
+                className="search-input border p-2 rounded-md text-white"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
             </div>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
             {loading ? (
               <div className="col-end-3 flex items-center justify-center">
                 <Atom
@@ -75,8 +97,10 @@ export const Portfolio = () => {
                   textColor="#F8B90C"
                 />
               </div>
+            ) : filteredPortfolio.length === 0 ? (
+              <p className="text-center col-span-3 text-red-500">No results found.</p>
             ) : (
-              portfolio.map((item, idx) => (
+              filteredPortfolio.map((item, idx) => (
                 <motion.div
                   key={idx}
                   className="glary_image"
