@@ -50,7 +50,6 @@ useEffect(() => {
   setFilteredPortfolio(filtered);
 }, [searchQuery, portfolio]);
 
-console.log(portfolio);
   return (
     <>
       <Helmet>
@@ -76,7 +75,7 @@ console.log(portfolio);
               <h1 className="text-center text-3xl text-shadow-2xs text-[#F8B90C] md:text-5xl">
                 My Portfolio
               </h1>
-              <h5 className="portfolio_sub_title">Recent work</h5>
+              <h5 className="portfolio_sub_title">Total Projects {portfolio.length}</h5>
               <input
                 type="text"
                 placeholder="Search by title & TeachStack......"
