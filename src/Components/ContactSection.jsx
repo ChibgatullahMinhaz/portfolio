@@ -63,7 +63,7 @@ const ContactSection = () => {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <div className="cbox text-center p-6 rounded-xl shadow hover:shadow-xl transition">
+            <div className="cbox bg=[#1C222A] text-center p-6 rounded-xl shadow hover:shadow-xl transition">
               <i
                 className={`${contact.icon} text-3xl text-indigo-500 mb-4`}
               ></i>
