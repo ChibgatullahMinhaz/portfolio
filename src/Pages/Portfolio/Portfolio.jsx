@@ -40,15 +40,18 @@ export const Portfolio = () => {
     loadPortfolio();
   }, []);
 
-useEffect(() => {
-  const filtered = portfolio.filter((item) =>
-    item?.remaining?.title?.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    item?.techStack?.some((tec) =>
-      tec.toLowerCase().includes(searchQuery.toLowerCase())
-    )
-  );
-  setFilteredPortfolio(filtered);
-}, [searchQuery, portfolio]);
+  useEffect(() => {
+    const filtered = portfolio.filter(
+      (item) =>
+        item?.remaining?.title
+          ?.toLowerCase()
+          .includes(searchQuery.toLowerCase()) ||
+        item?.techStack?.some((tec) =>
+          tec.toLowerCase().includes(searchQuery.toLowerCase())
+        )
+    );
+    setFilteredPortfolio(filtered);
+  }, [searchQuery, portfolio]);
 
   return (
     <>
@@ -86,7 +89,7 @@ useEffect(() => {
             </div>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+          <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-3">
             {loading ? (
               <div className="col-end-3 flex items-center justify-center">
                 <Atom
@@ -97,19 +100,25 @@ useEffect(() => {
                 />
               </div>
             ) : filteredPortfolio.length === 0 ? (
-              <p className="text-center col-span-3 text-red-500">No results found.</p>
+              <p className="text-center col-span-3 text-red-500">
+                No results found.
+              </p>
             ) : (
               filteredPortfolio.map((item, idx) => (
                 <motion.div
                   key={idx}
-                  className="glary_image"
+                  className="glary_image self-start"
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
                   variants={fadeInUp}
                   custom={idx + 2}
                 >
-                  <img src={item?.screenshots[0]} alt={item.title} />
+                  <img
+                    className="rounded-xl w-full"
+                    src={item?.screenshots[0]}
+                    alt={item.title}
+                  />
                   <h3>{item?.remaining?.title}</h3>
                   <div className="see_more">
                     <Link to={`/portfolio-details/${item._id}`}>

@@ -42,9 +42,7 @@ const MinddlePart = () => {
         transition={{ delay: 0.6 }}
       >
         <p>
-          From Chittagong, Bangladesh. I’m a MERN Stack Developer who is
-          passionate about making error-free websites. I love to Learn
-          always New skills and to acquire knowledge
+          I am a web developer with practical experience in building full-stack (MERN) applications using React, Node.js, Express, and MongoDB.
         </p>
       </motion.div>
 
