@@ -78,14 +78,14 @@ const RecentProject = () => {
               Recent.map((item, idx) => (
                 <motion.div
                   key={idx}
-                  className="glary_image"
+                  className="glary_image h-[300px]"
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
                   variants={fadeInUp}
                   custom={idx + 2}
                 >
-                  <img src={item?.screenshots[0]} alt={item.title} />
+                  <img className="rounded-xl" src={item?.screenshots[0]} alt={item.title} />
                   <h3>{item?.remaining?.title}</h3>
                   <div className="see_more">
                     <Link to={`/portfolio-details/${item._id}`}>

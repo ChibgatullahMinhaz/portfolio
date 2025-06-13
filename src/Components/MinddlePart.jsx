@@ -53,10 +53,10 @@ const MinddlePart = () => {
         className='flex gap-4 my-4'
       >
         <Link to={`/contact`} className="btn hireButtonDesign animate-bounce">
-          Contact Me
+          Contact Me↗
         </Link>
-        <Link to={`/`} className="btn buttonDesign animate-bounce">
-           Download CV
+        <Link target='_blank' to={`https://docs.google.com/document/d/1LQMz9x5akUgifUAPlNUIxtDiRdUXZVf87zN-AHrV5Co/edit?usp=sharing`} className="btn buttonDesign animate-bounce">
+            See Resume↗
         </Link>
       </motion.div>
     </motion.div>
