@@ -1,49 +1,70 @@
-import React from "react";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import { toast } from "react-toastify";
 import contactImage from "../../assets/hanshake.jpg";
 import FadeInUp from "../../Components/FadeInUp";
+import axios from "axios";
+
+const contactInfo = [
+  {
+    icon: "fa-location-dot",
+    title: "Address",
+    value: "Chittagong, Bangladesh",
+  },
+  {
+    icon: "fa-user",
+    title: "Freelancer",
+    value: "Available Right Now",
+  },
+  {
+    icon: "fa-envelope",
+    title: "Email",
+    value: "chibgatullahminhaz@gmail.com",
+  },
+];
+
+const formFields = [
+  {
+    label: "Name",
+    id: "name",
+    type: "text",
+    placeholder: "Enter Your Name",
+  },
+  {
+    label: "Email",
+    id: "email",
+    type: "email",
+    placeholder: "Enter Your Email",
+  },
+  {
+    label: "subject",
+    id: "subject",
+    type: "text",
+    placeholder: "Enter  Subject",
+  },
+];
 
 const Contact = () => {
-  const handleSubmit = (e) => {
+  const [isLoading, setLoading] = useState(false);
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    toast(
-      "Coming soon. Please try another way like Facebook or other social media."
-    );
+    const formData = new FormData(e.target);
+    const newMessage = Object.fromEntries(formData.entries());
+
+    try {
+      setLoading(true);
+      const res = await axios.post(
+        "https://portfolio-server-side-mu.vercel.app/sendEmail",
+        newMessage
+      );
+
+      toast.success(res?.data?.message);
+    } catch (error) {
+      toast.error(error.message);
+    } finally {
+      setLoading(false);
+    }
   };
-
-  const contactInfo = [
-    {
-      icon: "fa-location-dot",
-      title: "Address",
-      value: "Chittagong, Bangladesh",
-    },
-    {
-      icon: "fa-user",
-      title: "Freelancer",
-      value: "Available Right Now",
-    },
-    {
-      icon: "fa-envelope",
-      title: "Email",
-      value: "chibgatullahminhaz@gmail.com",
-    },
-  ];
-
-  const formFields = [
-    {
-      label: "Name",
-      id: "name",
-      type: "text",
-      placeholder: "Enter Your Name",
-    },
-    {
-      label: "Email",
-      id: "email",
-      type: "email",
-      placeholder: "Enter Your Email",
-    },
-  ];
 
   return (
     <>
@@ -147,9 +168,6 @@ const Contact = () => {
                   <textarea
                     name="message"
                     id="message"
-                    value={
-                      "Coming soon. Please try another way like Facebook or other social media."
-                    }
                     rows="5"
                     placeholder="Enter your message"
                     className="w-full px-4 py-2 rounded-md bg-gray-900 text-white border border-yellow-400 focus:outline-none"
@@ -161,9 +179,9 @@ const Contact = () => {
               <FadeInUp index={13}>
                 <button
                   type="submit"
-                  className="mt-4 px-6 py-2 bg-yellow-400 text-black font-semibold rounded-full hover:bg-yellow-500 transition"
+                  className="mt-4 px-6 py-2 cursor-pointer bg-yellow-400 text-black font-semibold rounded-full hover:bg-yellow-500 transition"
                 >
-                  Say Hello
+                  {isLoading ? "Sending....." : "Say Hello"}
                 </button>
               </FadeInUp>
             </form>
