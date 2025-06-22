@@ -50,7 +50,6 @@ export const Portfolio = () => {
             `https://portfolio-server-side-mu.vercel.app/searching?searchingquery=${searchQuery}&page=${currentPage}&skip=${itemPerPage}`
           );
           setPortfolio(res.data.result);
-          console.log(res.data.result);
           setTotalCount(res.data.totalCount);
         } else {
           const response = await fetch(

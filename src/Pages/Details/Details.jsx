@@ -49,7 +49,6 @@ const Details = () => {
     role,
     githubLinkServer
   } = remaining;
-console.log(project)
   return (
     <>
       <Helmet>
