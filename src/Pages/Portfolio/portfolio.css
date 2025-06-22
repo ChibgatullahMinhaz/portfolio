@@ -62,3 +62,8 @@ html{
     color: var(--dangerColor);
     margin-left: 1rem;
 }
+
+.selected {
+  background-color: orange;
+  
+}

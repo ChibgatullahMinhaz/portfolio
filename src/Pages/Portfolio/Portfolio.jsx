@@ -5,6 +5,7 @@ import "./portfolio.css";
 import { toast } from "react-toastify";
 import { Link } from "react-router";
 import { Atom } from "react-loading-indicators";
+import useTotalProjectCount from "../../Hooks/useTotalProjectCount";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -20,13 +21,25 @@ export const Portfolio = () => {
   const [filteredPortfolio, setFilteredPortfolio] = useState([]);
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
+  const [itemPerPage, setItemPerPage] = useState(6);
+  const [currentPage, setCurrentPage] = useState(0);
+  const totalCount = useTotalProjectCount();
+  const totalPage = Math.ceil(totalCount / itemPerPage);
+
+  const pages = [];
+  for (let index = 0; index < totalPage; index++) {
+    pages.push(index);
+  }
+
+
+  // 
 
   useEffect(() => {
     const loadPortfolio = async () => {
       try {
         setLoading(true);
         const response = await fetch(
-          "https://portfolio-server-side-mu.vercel.app/projects/all"
+          `https://portfolio-server-side-mu.vercel.app/projects/all?page=${currentPage}&skip=${itemPerPage}`
         );
         const data = await response.json();
         setPortfolio(data);
@@ -38,7 +51,7 @@ export const Portfolio = () => {
       }
     };
     loadPortfolio();
-  }, []);
+  }, [currentPage, itemPerPage]);
 
   useEffect(() => {
     const filtered = portfolio.filter(
@@ -52,7 +65,21 @@ export const Portfolio = () => {
     );
     setFilteredPortfolio(filtered);
   }, [searchQuery, portfolio]);
+  const handleNext = () => {
+    if (currentPage + 1 < totalPage) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+  const handlePrev = () => {
+    if (currentPage > 0) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
 
+  const handleChangePerPageItems =e=>{
+    setItemPerPage(e.target.value)
+    setCurrentPage(0)
+  }
   return (
     <>
       <Helmet>
@@ -89,7 +116,7 @@ export const Portfolio = () => {
             </div>
           </motion.div>
 
-          <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 space-y-3">
             {loading ? (
               <div className="col-end-3 flex items-center justify-center">
                 <Atom
@@ -130,6 +157,35 @@ export const Portfolio = () => {
             )}
           </div>
         </section>
+        {/* pagination */}
+        <div className="text-center mt-5 space-x-2">
+          <button onClick={handlePrev} className="btn glass focus:outline-none focus:border-2 focus:border-blue-300">
+            Prev
+          </button>
+          {pages.map((page) => (
+            <button
+              onClick={() => setCurrentPage(page)}
+              className={` p-3 rounded-lg cursor-pointer btn glass  ${
+                page === currentPage ? "selected" : "bg-gray-800"
+              }`}
+              key={page}
+            >
+              {page}
+            </button>
+          ))}
+          <button
+            onClick={handleNext}
+            className="btn glass cursor-pointer focus:outline-none focus:border-2 focus:border-gray-500"
+          >
+            Next
+          </button>
+          {/* select per item  */}
+          <select name="options" onChange={handleChangePerPageItems}>
+            <option  className="bg-gray-900 text-white" value="6">6</option>
+            <option className="bg-gray-900 text-white" value="10">10</option>
+            <option className="bg-gray-900 text-white" value="15">15</option>
+          </select>
+        </div>
       </main>
     </>
   );

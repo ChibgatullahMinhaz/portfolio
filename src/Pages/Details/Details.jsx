@@ -47,8 +47,9 @@ const Details = () => {
     githubLink,
     liveLink,
     role,
+    githubLinkServer
   } = remaining;
-
+console.log(project)
   return (
     <>
       <Helmet>
@@ -163,7 +164,17 @@ const Details = () => {
                 rel="noopener noreferrer"
                 className="bg-gray-800 hover:bg-black text-white px-4 py-2 rounded shadow"
               >
-                GitHub Repo
+                GitHub Clint Repo
+              </Link>
+            )}
+            {githubLinkServer && (
+              <Link
+                to={githubLinkServer}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gray-800 hover:bg-black text-white px-4 py-2 rounded shadow"
+              >
+                GitHub Server Repo
               </Link>
             )}
           </div>
