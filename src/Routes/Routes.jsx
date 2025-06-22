@@ -29,6 +29,7 @@ export const router = createBrowserRouter([
       {
         path: "/portfolio",
         Component: Portfolio,
+      
       },
       {
         path: "/portfolio-details/:projectId",

@@ -5,7 +5,7 @@ import "./portfolio.css";
 import { toast } from "react-toastify";
 import { Link } from "react-router";
 import { Atom } from "react-loading-indicators";
-import useTotalProjectCount from "../../Hooks/useTotalProjectCount";
+import axios from "axios";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -18,32 +18,47 @@ const fadeInUp = {
 
 export const Portfolio = () => {
   const [portfolio, setPortfolio] = useState([]);
-  const [filteredPortfolio, setFilteredPortfolio] = useState([]);
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
   const [itemPerPage, setItemPerPage] = useState(6);
   const [currentPage, setCurrentPage] = useState(0);
-  const totalCount = useTotalProjectCount();
-  const totalPage = Math.ceil(totalCount / itemPerPage);
+  const [totalCount, setTotalCount] = useState(0);
 
+  useEffect(() => {
+    const loadTotalCount = async () => {
+      const res = await axios.get(
+        "https://portfolio-server-side-mu.vercel.app/projectsCount"
+      );
+      setTotalCount(res.data.count);
+    };
+    loadTotalCount();
+  }, []);
+
+  const totalPage = Math.ceil(totalCount / itemPerPage);
   const pages = [];
   for (let index = 0; index < totalPage; index++) {
     pages.push(index);
   }
 
-
-  // 
-
+  // load data by items and page and pagination with searching
   useEffect(() => {
     const loadPortfolio = async () => {
       try {
         setLoading(true);
-        const response = await fetch(
-          `https://portfolio-server-side-mu.vercel.app/projects/all?page=${currentPage}&skip=${itemPerPage}`
-        );
-        const data = await response.json();
-        setPortfolio(data);
-        setFilteredPortfolio(data);
+        if (searchQuery) {
+          const res = await axios.get(
+            `https://portfolio-server-side-mu.vercel.app/searching?searchingquery=${searchQuery}&page=${currentPage}&skip=${itemPerPage}`
+          );
+          setPortfolio(res.data.result);
+          console.log(res.data.result);
+          setTotalCount(res.data.totalCount);
+        } else {
+          const response = await fetch(
+            `https://portfolio-server-side-mu.vercel.app/projects/all?page=${currentPage}&skip=${itemPerPage}`
+          );
+          const data = await response.json();
+          setPortfolio(data);
+        }
       } catch (error) {
         toast.error("Error fetching portfolio data:", error);
       } finally {
@@ -51,35 +66,26 @@ export const Portfolio = () => {
       }
     };
     loadPortfolio();
-  }, [currentPage, itemPerPage]);
+  }, [currentPage, itemPerPage, searchQuery]);
 
-  useEffect(() => {
-    const filtered = portfolio.filter(
-      (item) =>
-        item?.remaining?.title
-          ?.toLowerCase()
-          .includes(searchQuery.toLowerCase()) ||
-        item?.techStack?.some((tec) =>
-          tec.toLowerCase().includes(searchQuery.toLowerCase())
-        )
-    );
-    setFilteredPortfolio(filtered);
-  }, [searchQuery, portfolio]);
+  // next
   const handleNext = () => {
     if (currentPage + 1 < totalPage) {
       setCurrentPage(currentPage + 1);
     }
   };
+
+  // prev
   const handlePrev = () => {
     if (currentPage > 0) {
       setCurrentPage(currentPage - 1);
     }
   };
 
-  const handleChangePerPageItems =e=>{
-    setItemPerPage(e.target.value)
-    setCurrentPage(0)
-  }
+  const handleChangePerPageItems = (e) => {
+    setItemPerPage(e.target.value);
+    setCurrentPage(0);
+  };
   return (
     <>
       <Helmet>
@@ -111,7 +117,10 @@ export const Portfolio = () => {
                 placeholder="Search by title & TeachStack......"
                 className="search-input border p-2 rounded-md text-white"
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={(e) => {
+                  setSearchQuery(e.target.value);
+                  setCurrentPage(0);
+                }}
               />
             </div>
           </motion.div>
@@ -126,12 +135,12 @@ export const Portfolio = () => {
                   textColor="#F8B90C"
                 />
               </div>
-            ) : filteredPortfolio.length === 0 ? (
+            ) : portfolio.length === 0 ? (
               <p className="text-center col-span-3 text-red-500">
                 No results found.
               </p>
             ) : (
-              filteredPortfolio.map((item, idx) => (
+              portfolio.map((item, idx) => (
                 <motion.div
                   key={idx}
                   className="glary_image self-start"
@@ -159,7 +168,10 @@ export const Portfolio = () => {
         </section>
         {/* pagination */}
         <div className="text-center mt-5 space-x-2">
-          <button onClick={handlePrev} className="btn glass focus:outline-none focus:border-2 focus:border-blue-300">
+          <button
+            onClick={handlePrev}
+            className="btn glass focus:outline-none focus:border-2 focus:border-blue-300"
+          >
             Prev
           </button>
           {pages.map((page) => (
@@ -181,9 +193,15 @@ export const Portfolio = () => {
           </button>
           {/* select per item  */}
           <select name="options" onChange={handleChangePerPageItems}>
-            <option  className="bg-gray-900 text-white" value="6">6</option>
-            <option className="bg-gray-900 text-white" value="10">10</option>
-            <option className="bg-gray-900 text-white" value="15">15</option>
+            <option className="bg-gray-900 text-white" value="6">
+              6
+            </option>
+            <option className="bg-gray-900 text-white" value="10">
+              10
+            </option>
+            <option className="bg-gray-900 text-white" value="15">
+              15
+            </option>
           </select>
         </div>
       </main>
