@@ -4,8 +4,8 @@ import { FaGithub, FaLinkedin, FaFacebook, FaYoutube, FaShopify } from "react-ic
 
 const socialLinks = [
   { icon: <FaGithub />, url: "https://github.com/chibgatullahminhaz" },
-  { icon: <FaLinkedin />, url: "#" },
-  { icon: <FaShopify />, url: "https://www.fiverr.com/chibgatullah_" },
+  { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/chibgatullah-minhaz-536149361/" },
+  { icon: <FaShopify />, url: "https://www.fiverr.com/users/chibgatullah554/" },
   { icon: <FaFacebook />, url: "https://www.facebook.com/profile.php?id=100073178942060" },
   { icon: <FaYoutube />, url: "#" },
 ];
