@@ -33,31 +33,15 @@ const ContactSection = () => {
 
   return (
     <section className="px-4 py-12">
-      <div className="text-center mb-10">
-        <h1
-          className="text-4xl font-bold mb-2"
-          data-aos="fade-right"
-          data-aos-duration="2000"
-        >
-          Contact
-        </h1>
-        <h5
-          className="text-lg "
-          data-aos="fade-left"
-          data-aos-duration="2000"
-        >
-          Are You Looking For Your Business Online Presence? I am here. 🙂
-        </h5>
-      </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {contactLinks.map((contact, index) => (
           <motion.a
             key={contact.title}
             href={contact.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="card box_border block"
+            className="block card box_border"
             variants={fadeVariants}
             initial="hidden"
             whileInView="visible"
@@ -67,7 +51,7 @@ const ContactSection = () => {
               <i
                 className={`${contact.icon} text-3xl text-indigo-500 mb-4`}
               ></i>
-              <h3 className="text-xl font-semibold mb-1">{contact.title}</h3>
+              <h3 className="mb-1 text-xl font-semibold">{contact.title}</h3>
               <p className="text-gray-600 line-clamp-1">{contact.sub}</p>
             </div>
           </motion.a>

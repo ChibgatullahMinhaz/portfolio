@@ -36,7 +36,6 @@ const RecentProject = () => {
   }, []);
   return (
     <div className="my-10 md:my-16">
-      <h1 className="text-center font-bold text-4xl">Recent Work</h1>
       <Helmet>
         <title>Portfolio - Chibgatullah Minhaz</title>
         <meta
@@ -56,7 +55,7 @@ const RecentProject = () => {
             variants={fadeInUp}
             custom={1}
           >
-            <div className="text-center my-5 space-y-4">
+            <div className="my-5 space-y-4 text-center">
               <h1 className="text-center text-3xl text-shadow-2xs text-[#F8B90C] md:text-5xl">
                 My Portfolio
               </h1>
@@ -64,9 +63,9 @@ const RecentProject = () => {
             </div>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {isLoading ? (
-              <div className="col-end-3 flex items-center justify-center">
+              <div className="flex items-center justify-center col-end-3">
                 <Atom
                   color={["#00FFFF", "#B0E0E6", "#ADD8E6", "#FFFFFF"]}
                   size="large"
