@@ -5,11 +5,9 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 export const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden hero-gradient">
-      {/* Animated background orbs */}
       <div className="floating-orb w-96 h-96 bg-primary top-20 -left-48" />
       <div className="floating-orb w-72 h-72 bg-accent bottom-20 -right-36" style={{ animationDelay: "-4s" }} />
 
-      {/* Grid pattern overlay */}
       <div className="absolute inset-0 grid-pattern opacity-50" />
 
       <div className="container relative z-10 px-6 pt-24">
@@ -21,7 +19,7 @@ export const Hero = () => {
             className="mb-6"
           >
             <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium border border-primary/20">
-              Full Stack Developer
+              Full Stack & Mobile Developer
             </span>
           </motion.div>
 
@@ -31,9 +29,7 @@ export const Hero = () => {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-balance"
           >
-            Building the Future with{" "}
-            <span className="gradient-text">Modern Stack</span>{" "}
-            & <span className="gradient-text">AI</span>
+            Building Modern <span className="gradient-text">Web & Mobile</span> Experiences
           </motion.h1>
 
           <motion.p
@@ -42,8 +38,7 @@ export const Hero = () => {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto text-balance"
           >
-            Specialized in MERN & PERN stacks, AI Agents, n8n automation, Docker, and Prisma.
-            Crafting scalable solutions that push boundaries.
+            Full-Stack & Mobile Developer specialized in MERN/PERN stacks, React Native. Crafting scalable web platforms and cross-platform mobile apps.
           </motion.p>
 
           <motion.div
@@ -78,9 +73,9 @@ export const Hero = () => {
             className="flex items-center justify-center gap-6"
           >
             {[
-              { icon: FaGithub, href: "https://github.com", label: "GitHub" },
+              { icon: FaGithub, href: "https://github.com/ChibgatullahMinhaz", label: "GitHub" },
               { icon: FaLinkedin, href: "https://linkedin.com", label: "LinkedIn" },
-              { icon: Mail, href: "mailto:chminhaz@example.com", label: "Email" },
+              { icon: Mail, href: "mailto:chminhaz.info@gmail.com", label: "Email" },
             ].map(({ icon: Icon, href, label }) => (
               <motion.a
                 key={label}

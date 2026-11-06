@@ -1,0 +1,248 @@
+{
+  "categories": [
+    { "value": "all", "label": "All Projects" },
+    { "value": "web", "label": "Web Applications" },
+    { "value": "android", "label": "Mobile Apps" },
+    { "value": "ai", "label": "AI & Automation" },
+    { "value": "backend", "label": "Backend Systems" }
+  ],
+  "techFilters": [
+    "React",
+    "Node.js",
+    "PostgreSQL",
+    "MongoDB",
+    "Docker",
+    "Kubernetes",
+    "TypeScript",
+    "n8n",
+    "AI/ML",
+    "React Native"
+  ],
+  "projects": [
+    {
+      "id": "ai-ecommerce",
+      "title": "AI-Powered E-Commerce Platform",
+      "description": "Full-stack MERN application with AI product recommendations, real-time chat support, and automated inventory management using n8n workflows.",
+      "fullDescription": "A comprehensive e-commerce solution built with the MERN stack, featuring intelligent product recommendations powered by OpenAI, real-time customer support chatbot, and seamless inventory management through automated n8n workflows. The platform handles thousands of daily transactions with 99.9% uptime.",
+      "tags": ["React", "Node.js", "MongoDB", "OpenAI", "n8n"],
+      "icon": "Bot",
+      "gradient": "from-primary to-accent",
+      "github": "#",
+      "live": "#",
+      "category": "web",
+      "techStack": [
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "OpenAI API",
+        "n8n",
+        "Redis",
+        "Docker"
+      ],
+      "features": [
+        "AI-powered product recommendations based on user behavior",
+        "Real-time chat support with intelligent bot",
+        "Automated inventory management and restocking alerts",
+        "Seamless payment integration with Stripe",
+        "Admin dashboard with analytics"
+      ],
+      "challenges": [
+        "Implementing efficient caching for AI responses",
+        "Handling high-concurrency during flash sales",
+        "Integrating multiple third-party APIs seamlessly"
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop"
+      ]
+    },
+    {
+      "id": "enterprise-pipeline",
+      "title": "Enterprise Data Pipeline",
+      "description": "Scalable PERN stack solution with Prisma ORM, handling millions of records with automated ETL processes and real-time analytics.",
+      "fullDescription": "A robust enterprise-grade data pipeline built on the PERN stack with Prisma ORM. Designed to handle massive datasets with millions of records, featuring automated ETL processes, real-time analytics dashboards, and comprehensive monitoring. The system processes over 10 million records daily with sub-second query times.",
+      "tags": ["PostgreSQL", "Express", "React", "Prisma", "Docker"],
+      "icon": "Database",
+      "gradient": "from-accent to-primary",
+      "github": "#",
+      "live": "#",
+      "category": "backend",
+      "techStack": [
+        "PostgreSQL",
+        "Express",
+        "React",
+        "TypeScript",
+        "Prisma",
+        "Docker",
+        "Redis",
+        "GraphQL"
+      ],
+      "features": [
+        "Automated ETL pipelines for data transformation",
+        "Real-time analytics dashboard with Recharts",
+        "Role-based access control and audit logging",
+        "Horizontal scaling with load balancing",
+        "Comprehensive API documentation with Swagger"
+      ],
+      "challenges": [
+        "Optimizing complex SQL queries for large datasets",
+        "Implementing efficient data partitioning strategies",
+        "Building fault-tolerant data processing pipelines"
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop"
+      ]
+    },
+    {
+      "id": "workflow-automation",
+      "title": "Workflow Automation Hub",
+      "description": "Centralized automation platform built with n8n, integrating 50+ APIs and AI agents for intelligent task automation and monitoring.",
+      "fullDescription": "A centralized automation platform that connects and orchestrates over 50 different APIs and services. Features intelligent AI agents that can make decisions, handle exceptions, and optimize workflows automatically. Used by multiple teams to automate repetitive tasks, saving hundreds of hours monthly.",
+      "tags": ["n8n", "Node.js", "AI Agents", "TypeScript", "Redis"],
+      "icon": "Workflow",
+      "gradient": "from-primary via-accent to-primary",
+      "github": "#",
+      "live": "#",
+      "category": "ai",
+      "techStack": [
+        "n8n",
+        "Node.js",
+        "TypeScript",
+        "Redis",
+        "PostgreSQL",
+        "Docker",
+        "LangChain"
+      ],
+      "features": [
+        "50+ API integrations with custom connectors",
+        "AI agents for intelligent decision making",
+        "Visual workflow builder with drag-and-drop",
+        "Real-time execution monitoring and alerts",
+        "Automatic error handling and retry mechanisms"
+      ],
+      "challenges": [
+        "Managing complex workflow dependencies",
+        "Building reliable AI agent decision trees",
+        "Ensuring data consistency across integrations"
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=600&fit=crop"
+      ]
+    },
+    {
+      "id": "cloud-microservices",
+      "title": "Cloud-Native Microservices",
+      "description": "Dockerized microservices architecture with Kubernetes orchestration, CI/CD pipelines, and comprehensive monitoring solutions.",
+      "fullDescription": "A production-ready microservices architecture deployed on Kubernetes with full CI/CD automation. Features service mesh communication, distributed tracing, and comprehensive monitoring with Prometheus and Grafana. Handles millions of requests daily with automatic scaling and self-healing capabilities.",
+      "tags": ["Docker", "Kubernetes", "Node.js", "PostgreSQL", "AWS"],
+      "icon": "Cloud",
+      "gradient": "from-accent via-primary to-accent",
+      "github": "#",
+      "live": "#",
+      "category": "backend",
+      "techStack": [
+        "Docker",
+        "Kubernetes",
+        "Node.js",
+        "PostgreSQL",
+        "AWS",
+        "Terraform",
+        "Prometheus",
+        "Grafana"
+      ],
+      "features": [
+        "Auto-scaling based on traffic patterns",
+        "Service mesh with Istio for secure communication",
+        "Distributed tracing with Jaeger",
+        "Infrastructure as Code with Terraform",
+        "Blue-green deployments for zero downtime"
+      ],
+      "challenges": [
+        "Implementing efficient service-to-service communication",
+        "Managing state in a distributed system",
+        "Optimizing Kubernetes resource allocation"
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop"
+      ]
+    },
+    {
+      "id": "mobile-fitness",
+      "title": "AI Fitness Companion App",
+      "description": "Cross-platform mobile app with AI-powered workout recommendations, progress tracking, and personalized nutrition plans.",
+      "fullDescription": "A comprehensive fitness application built with React Native, featuring AI-powered workout recommendations that adapt to user progress and goals. Includes real-time form correction using computer vision, personalized nutrition plans, and social features for community motivation.",
+      "tags": ["React Native", "Node.js", "TensorFlow", "PostgreSQL"],
+      "icon": "Smartphone",
+      "gradient": "from-primary to-accent",
+      "github": "#",
+      "live": "#",
+      "category": "android",
+      "techStack": [
+        "React Native",
+        "Node.js",
+        "Express",
+        "PostgreSQL",
+        "TensorFlow Lite",
+        "Firebase"
+      ],
+      "features": [
+        "AI-powered personalized workout plans",
+        "Real-time form correction with camera",
+        "Progress tracking with detailed analytics",
+        "Social features and community challenges",
+        "Offline mode with data sync"
+      ],
+      "challenges": [
+        "Optimizing TensorFlow models for mobile",
+        "Implementing smooth animations during workouts",
+        "Managing offline-first data architecture"
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop"
+      ]
+    },
+    {
+      "id": "saas-platform",
+      "title": "Multi-Tenant SaaS Platform",
+      "description": "Enterprise SaaS solution with multi-tenant architecture, subscription billing, and comprehensive admin controls.",
+      "fullDescription": "A complete SaaS platform with multi-tenant architecture, supporting thousands of organizations. Features include subscription management with Stripe, role-based access control, white-labeling capabilities, and comprehensive analytics. Built for scale with PostgreSQL row-level security.",
+      "tags": ["React", "Node.js", "PostgreSQL", "Stripe", "Docker"],
+      "icon": "Globe",
+      "gradient": "from-accent to-primary",
+      "github": "#",
+      "live": "#",
+      "category": "web",
+      "techStack": [
+        "React",
+        "Node.js",
+        "Express",
+        "PostgreSQL",
+        "Prisma",
+        "Stripe",
+        "Redis",
+        "Docker"
+      ],
+      "features": [
+        "Multi-tenant architecture with data isolation",
+        "Subscription billing with Stripe integration",
+        "White-labeling and custom domain support",
+        "Role-based access control (RBAC)",
+        "Comprehensive analytics dashboard"
+      ],
+      "challenges": [
+        "Implementing efficient tenant isolation",
+        "Building scalable subscription management",
+        "Handling complex permission hierarchies"
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=600&fit=crop"
+      ]
+    }
+  ]
+}
