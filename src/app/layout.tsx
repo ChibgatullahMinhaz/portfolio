@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/hooks/useTheme";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
+import { CustomCursor } from "@/components/CustomCursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,6 +37,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <ThemeProvider>
           <TooltipProvider>
+            <CustomCursor />
             <Toaster />
             <Sonner />
             {children}

@@ -4,15 +4,6 @@
 @import "shadcn/tailwind.css";
 
 @custom-variant dark (&:is(.dark *));
-
-/* ==========================================================================
-   THEME: Graphite Emerald (dark) / Graphite Light (light)
-
-   One format for every token: plain color values (hex).
-   Light = :root, Dark = .dark. Both live in the same @layer so one can
-   never silently override the other.
-   ========================================================================== */
-
 @layer base {
   :root {
     color-scheme: light;
@@ -151,12 +142,6 @@
   }
 }
 
-/* ==========================================================================
-   TAILWIND MAPPING
-   "inline" makes utilities read the CSS variable at runtime, so the
-   .dark class switches colors without extra work.
-   ========================================================================== */
-
 @theme inline {
   --font-heading: var(--font-sans);
 
@@ -208,8 +193,7 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-/* "static" always emits these variables, even if no shadow-* utility is used
-   (.glass-card reads --shadow-card directly). Dark values are set in .dark. */
+
 @theme static {
   --font-sans: "Sora", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
@@ -219,9 +203,6 @@
   --shadow-elevated: 0 16px 48px rgb(20 23 26 / 0.12);
 }
 
-/* ==========================================================================
-   COMPONENTS (class names unchanged, so existing markup keeps working)
-   ========================================================================== */
 
 @layer components {
   .gradient-text {
