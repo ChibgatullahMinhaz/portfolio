@@ -6,7 +6,7 @@ import { InteractiveDotGrid } from "./InteractiveDotGrid";
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden hero-gradient">
+    <section id="intro" className="relative min-h-screen flex items-center justify-center overflow-hidden hero-gradient">
       <div className="floating-orb w-96 h-96 bg-primary top-20 -left-48" />
       <div className="floating-orb w-72 h-72 bg-accent bottom-20 -right-36" style={{ animationDelay: "-4s" }} />
 
