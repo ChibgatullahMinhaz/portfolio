@@ -9,68 +9,26 @@ import {
   Server, 
   Layers,
   Cpu,
-  Cloud
+  Cloud,
+  type LucideIcon
 } from "lucide-react";
+import { servicesOverviewData } from "@/db";
 
-const services = [
-  {
-    icon: Code2,
-    title: "Full-Stack Development",
-    description: "End-to-end web application development using MERN and PERN stacks with modern UI/UX design principles.",
-    features: ["React & Next.js", "Node.js & Express", "MongoDB & PostgreSQL", "TypeScript"],
-    gradient: "from-primary to-accent",
-  },
-  {
-    icon: Server,
-    title: "Backend Development",
-    description: "Robust and scalable backend solutions with RESTful APIs, GraphQL, and microservices architecture.",
-    features: ["REST & GraphQL APIs", "Express.js", "Prisma ORM", "Authentication & Security"],
-    gradient: "from-accent to-primary",
-  },
-  {
-    icon: Database,
-    title: "Database Design",
-    description: "Efficient database architecture with PostgreSQL, MongoDB, optimized queries, and data modeling.",
-    features: ["Schema Design", "Query Optimization", "Data Migration", "Backup Strategies"],
-    gradient: "from-primary via-accent to-primary",
-  },
-  {
-    icon: Bot,
-    title: "AI Integration",
-    description: "Seamlessly integrate AI capabilities into your applications using OpenAI, LangChain, and custom models.",
-    features: ["OpenAI & GPT", "LangChain", "Custom AI Models", "RAG Systems"],
-    gradient: "from-accent via-primary to-accent",
-  },
-  {
-    icon: Workflow,
-    title: "AI Agents & Automation",
-    description: "Build intelligent AI agents and automation workflows using n8n to streamline your business processes.",
-    features: ["n8n Workflows", "AI Agents", "Task Automation", "API Integrations"],
-    gradient: "from-primary to-accent",
-  },
-  {
-    icon: Cloud,
-    title: "DevOps & Deployment",
-    description: "Containerization with Docker, CI/CD pipelines, and cloud deployment on AWS, GCP, or Azure.",
-    features: ["Docker & Kubernetes", "CI/CD Pipelines", "Cloud Services", "Monitoring"],
-    gradient: "from-accent to-primary",
-  },
-  {
-    icon: Layers,
-    title: "System Design",
-    description: "Architect scalable, distributed systems with high availability, fault tolerance, and optimal performance.",
-    features: ["Scalability Planning", "Load Balancing", "Caching Strategies", "Microservices"],
-    gradient: "from-primary via-accent to-primary",
-    highlight: true,
-  },
-  {
-    icon: Cpu,
-    title: "API Development",
-    description: "Design and develop secure, well-documented APIs that power your applications and integrations.",
-    features: ["RESTful Design", "Rate Limiting", "Documentation", "Versioning"],
-    gradient: "from-accent via-primary to-accent",
-  },
-];
+const iconMap: Record<string, LucideIcon> = {
+  Code2,
+  Database,
+  Bot,
+  Workflow,
+  Server,
+  Layers,
+  Cpu,
+  Cloud,
+};
+
+const services = servicesOverviewData.map((s) => ({
+  ...s,
+  icon: iconMap[s.icon] ?? Code2,
+}));
 
 export const Services = () => {
   const ref = useRef(null);

@@ -273,9 +273,20 @@
     animation: marquee 40s linear infinite;
   }
 
+  .animate-marquee-reverse {
+    animation: marquee 40s linear infinite reverse;
+  }
+
   .group:hover .group-hover\:paused,
   .group-hover\:paused:hover {
     animation-play-state: paused;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .animate-marquee-reverse {
+    animation: none;
   }
 }
 

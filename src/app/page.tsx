@@ -1,26 +1,36 @@
 import { About } from "@/components/About";
-import { Contact } from "@/components/Contact";
+import { CTA } from "@/components/CTA";
+import { CurrentFocus } from "@/components/CurrentFocus";
 import { Footer } from "@/components/Footer";
+import { SelectedWork } from "@/components/SelectedWork";
+import { Ecosystem } from "@/components/Ecosystem";
+import { Experience } from "@/components/Experience";
 import { Hero } from "@/components/Hero";
 import { Navbar } from "@/components/Navbar";
-import { Projects } from "@/components/Projects";
+import { Philosophy } from "@/components/Philosophy";
+import { Process } from "@/components/Process";
 import { ScrollSpyDots } from "@/components/ScrollSpyDots";
 import { ScrollToTop } from "@/components/ScrollToTop";
-import { Skills } from "@/components/Skills";
 import { WhatIDo } from "@/components/WhatIDo";
+import { WhyWorkWithMe } from "@/components/WhyWorkWithMe";
 
 export default function Home() {
   return (
     <>
-      <div className="min-h-screen bg-background overflow-x-clip">
+      <div className="min-h-screen bg-background overflow-x-clip lg:pr-14 xl:pr-20 2xl:pr-0">
         <ScrollSpyDots />
         <Navbar />
         <Hero />
         <About />
         <WhatIDo />
-        <Skills />
-        <Projects />
-        <Contact />
+        <Philosophy />
+        <Ecosystem />
+        <SelectedWork />
+        <Experience />
+        <Process />
+        <CurrentFocus />
+        <WhyWorkWithMe />
+        <CTA />
         <Footer />
         <ScrollToTop />
       </div>   </>

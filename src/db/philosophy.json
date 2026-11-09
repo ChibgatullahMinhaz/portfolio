@@ -1,0 +1,22 @@
+[
+  {
+    "num": "01",
+    "title": "Built to be reused",
+    "description": "Shared components, hooks and API helpers live in one place, so every new screen starts from proven parts instead of a copy-paste."
+  },
+  {
+    "num": "02",
+    "title": "Fast from day one",
+    "description": "Lean state, lazy loading and small bundles are habits from the first commit. Performance is designed in, not patched in at the end."
+  },
+  {
+    "num": "03",
+    "title": "Tested before shipped",
+    "description": "Critical flows get tests, interfaces get checked across browsers and devices, and every change is reviewed before it reaches users."
+  },
+  {
+    "num": "04",
+    "title": "Clear end to end",
+    "description": "From the database to the pixel, data flow stays easy to trace. I document decisions so the next developer can pick the work up quickly."
+  }
+]

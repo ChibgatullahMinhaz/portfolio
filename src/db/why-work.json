@@ -1,0 +1,22 @@
+[
+  {
+    "icon": "collaboration",
+    "title": "Direct collaboration",
+    "description": "You work straight with the developer — no account managers, no hand-offs. Every decision and update comes from the person writing your code."
+  },
+  {
+    "icon": "ownership",
+    "title": "End-to-end ownership",
+    "description": "Database schema to pixel to production — one person accountable for the whole stack, so nothing gets lost between layers."
+  },
+  {
+    "icon": "timelines",
+    "title": "Honest timelines",
+    "description": "Estimates come with buffer built in, and progress is shared early — you find out how things are going before you have to ask."
+  },
+  {
+    "icon": "support",
+    "title": "Support after launch",
+    "description": "Shipping is a milestone, not a goodbye. Fixes, tweaks and small improvements stay on the table once your product is live."
+  }
+]

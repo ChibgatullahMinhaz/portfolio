@@ -1,0 +1,15 @@
+{
+  "stats": [
+    { "value": 1.5, "suffix": "+", "decimals": 1, "label": "Years of Experience" },
+    { "value": 10, "suffix": "+", "decimals": 0, "label": "Projects Completed" },
+    { "value": 5, "suffix": "+", "decimals": 0, "label": "Happy Clients" },
+    { "value": 20, "suffix": "+", "decimals": 0, "label": "Technologies & Tools" }
+  ],
+  "approachPoints": [
+    "Comfortable owning a feature end to end — from the first database table to the last pixel check.",
+    "Interfaces stay fast as they grow: state kept local where it belongs, and data fetched close to where it renders.",
+    "Reusable components and hooks before repeating myself a second time.",
+    "Honest about scope — I'd rather flag a deadline early than go quiet and miss it.",
+    "Curious by default: every project ends with me knowing one tool or pattern better than when it started."
+  ]
+}

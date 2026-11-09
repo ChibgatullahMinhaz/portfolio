@@ -1,13 +1,7 @@
 "use client";
 import { motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-
-const stats = [
-  { value: 1.5, suffix: "+", decimals: 1, label: "Years of Experience" },
-  { value: 10, suffix: "+", decimals: 0, label: "Projects Completed" },
-  { value: 5, suffix: "+", decimals: 0, label: "Happy Clients" },
-  { value: 20, suffix: "+", decimals: 0, label: "Technologies & Tools" },
-];
+import { aboutStats as stats } from "@/db";
 
 const AnimatedNumber = ({
   value,

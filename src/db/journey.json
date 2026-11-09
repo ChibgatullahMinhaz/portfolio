@@ -1,0 +1,17 @@
+[
+  {
+    "period": "2024",
+    "title": "Learning the craft",
+    "note": "Dove deep into the JavaScript ecosystem — React on the front, Node and Express on the back, and enough CSS to stop fearing layout."
+  },
+  {
+    "period": "Early 2025",
+    "title": "First client work",
+    "note": "Started taking on freelance projects: small business sites, dashboards and Firebase-backed apps for early customers."
+  },
+  {
+    "period": "2025 — now",
+    "title": "Full-time freelancing",
+    "note": "Working directly with clients on MERN and PERN products, React Native apps and deployment pipelines — my current role."
+  }
+]

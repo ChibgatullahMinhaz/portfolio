@@ -1,0 +1,117 @@
+[
+  {
+    "num": "01",
+    "title": "Full-Stack Web Apps",
+    "summary": "MERN or PERN products taken from a blank repo to a deployed application — one codebase mindset across the whole stack.",
+    "stack": ["React", "Node.js", "Express", "PostgreSQL", "MongoDB"],
+    "fits": [
+      "MVPs and early-stage products",
+      "Internal tools that outgrew spreadsheets",
+      "APIs with a real frontend on top"
+    ],
+    "deliverables": [
+      "End-to-end data flow, schema to screen",
+      "REST APIs documented and versioned",
+      "Deployed build with CI-ready pipelines"
+    ],
+    "related": [
+      { "id": "ai-ecommerce", "name": "AI-Powered E-Commerce", "kind": "Storefront + admin" },
+      { "id": "saas-platform", "name": "Multi-Tenant SaaS", "kind": "Web platform" }
+    ]
+  },
+  {
+    "num": "02",
+    "title": "Mobile Apps with React Native",
+    "summary": "One shared codebase shipping apps to both app stores — native feel without doubling the budget.",
+    "stack": ["React Native", "Expo", "TypeScript", "Firebase"],
+    "fits": [
+      "Companion apps for existing web products",
+      "Cross-platform consumer apps",
+      "Rapid prototypes that go to production"
+    ],
+    "deliverables": [
+      "iOS and Android builds from one code",
+      "Push notifications and offline handling",
+      "Store-ready release configuration"
+    ],
+    "related": [
+      { "id": "mobile-fitness", "name": "AI Fitness Companion", "kind": "Mobile app" }
+    ]
+  },
+  {
+    "num": "03",
+    "title": "Backend & API Development",
+    "summary": "The layer under the interface: schemas, auth, business logic and APIs that frontends can rely on.",
+    "stack": ["Node.js", "Express", "Prisma", "PostgreSQL", "Redis"],
+    "fits": [
+      "Greenfield APIs for new products",
+      "Replacing fragile legacy endpoints",
+      "Third-party service orchestration"
+    ],
+    "deliverables": [
+      "Typed, tested endpoints",
+      "Auth, roles and rate limiting",
+      "Database design with migrations"
+    ],
+    "related": [
+      { "id": "enterprise-pipeline", "name": "Enterprise Data Pipeline", "kind": "Data platform" }
+    ]
+  },
+  {
+    "num": "04",
+    "title": "Firebase-Powered Products",
+    "summary": "Fast-moving products built on Firebase — auth, data and storage wired together without managing servers.",
+    "stack": ["Firebase Auth", "Firestore", "Cloud Functions", "FCM", "Storage"],
+    "fits": [
+      "Startups that need to ship this month",
+      "Chat, feeds and realtime features",
+      "Side projects that need real infrastructure"
+    ],
+    "deliverables": [
+      "Auth flows wired end to end",
+      "Realtime rules structured for safety",
+      "Serverless functions for heavy lifting"
+    ],
+    "related": [
+      { "id": "workflow-automation", "name": "Workflow Automation Hub", "kind": "Automation" }
+    ]
+  },
+  {
+    "num": "05",
+    "title": "AI-Enhanced Interfaces",
+    "summary": "Application-layer AI: chat assistants, smart suggestions and summarisation — plugged into real screens, not slideware.",
+    "stack": ["OpenAI API", "Prompt design", "RAG patterns", "Streaming UI"],
+    "fits": [
+      "Support chat inside your product",
+      "Smart search and recommendations",
+      "Summaries and extraction from messy text"
+    ],
+    "deliverables": [
+      "AI features wired into your existing UX",
+      "Prompts packaged as versioned modules",
+      "Usage tracking and cost safety nets"
+    ],
+    "related": [
+      { "id": "ai-ecommerce", "name": "AI-Powered E-Commerce", "kind": "Storefront + admin" }
+    ]
+  },
+  {
+    "num": "06",
+    "title": "Deployment & DevOps Setup",
+    "summary": "The unglamorous part of shipping: containers, CI and environments so your app isn't stuck on one laptop.",
+    "stack": ["Docker", "GitHub Actions", "Nginx", "VPS", "Vercel"],
+    "fits": [
+      "Handover-ready deployment pipelines",
+      "Moving from static hosts to real setups",
+      "Reproducible builds across machines"
+    ],
+    "deliverables": [
+      "Containerised services",
+      "CI/CD from push to production",
+      "Environment and secret management"
+    ],
+    "related": [
+      { "id": "cloud-microservices", "name": "Cloud-Native Microservices", "kind": "Infrastructure" }
+    ]
+  }
+]

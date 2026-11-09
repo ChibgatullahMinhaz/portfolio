@@ -1,0 +1,75 @@
+{
+  "marqueeRows": [
+    {
+      "reverse": false,
+      "items": [
+        "React.js", "Next.js", "TypeScript", "JavaScript", "Redux Toolkit",
+        "Tailwind CSS", "React Native", "Framer Motion"
+      ]
+    },
+    {
+      "reverse": true,
+      "items": [
+        "Node.js", "Express.js", "MongoDB", "PostgreSQL", "Prisma",
+        "Firebase", "Docker", "CI/CD"
+      ]
+    }
+  ],
+  "areas": [
+    {
+      "title": "Core frontend",
+      "description": "Fast, typed, component-driven interfaces for the web.",
+      "stack": ["React.js", "Next.js", "TypeScript", "JavaScript (ES6+)"]
+    },
+    {
+      "title": "UI & styling",
+      "description": "Layouts that stay consistent from a phone to a wide monitor.",
+      "stack": ["Tailwind CSS", "shadcn/ui", "Framer Motion", "HTML5 / CSS3", "Figma to code"]
+    },
+    {
+      "title": "State & data",
+      "description": "Predictable state, clean data fetching and live-updating views.",
+      "stack": ["Redux Toolkit", "Context API", "React Hooks", "REST APIs"]
+    },
+    {
+      "title": "MERN stack",
+      "description": "A React client talking to a Node API and a document database.",
+      "stack": ["Node.js", "Express.js", "MongoDB", "Mongoose", "JWT"],
+      "tag": "Daily driver"
+    },
+    {
+      "title": "PERN stack",
+      "description": "Relational data, typed queries and APIs that keep their shape.",
+      "stack": ["PostgreSQL", "Prisma", "Express.js", "Node.js"],
+      "tag": "Daily driver"
+    },
+    {
+      "title": "Mobile apps",
+      "description": "One codebase shipping to both iOS and Android.",
+      "stack": ["React Native", "Expo", "React Navigation"],
+      "tag": "Cross-platform"
+    },
+    {
+      "title": "Firebase",
+      "description": "A complete backend without running a server of my own.",
+      "stack": ["Firebase Auth", "Firestore", "Cloud Storage", "Cloud Functions", "Hosting"],
+      "tag": "Backend as a service"
+    },
+    {
+      "title": "Auth & security",
+      "description": "Sign-in flows, protected routes and validated input.",
+      "stack": ["JWT", "Firebase Auth", "Role-based access", "Zod / validation"]
+    },
+    {
+      "title": "DevOps & delivery",
+      "description": "Reproducible builds and a pipeline that ships on every merge.",
+      "stack": ["Docker", "CI/CD", "Git", "GitHub", "Vercel", "Postman"]
+    },
+    {
+      "title": "AI integration",
+      "description": "Adding AI-powered features to apps through APIs, without building the models.",
+      "stack": ["OpenAI API", "Prompt design", "REST integration", "AI-assisted coding"],
+      "tag": "Application layer"
+    }
+  ]
+}

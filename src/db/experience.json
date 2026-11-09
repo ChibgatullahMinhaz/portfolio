@@ -1,0 +1,33 @@
+[
+  {
+    "period": "2025 — Present",
+    "location": "Worldwide · Remote",
+    "current": true,
+    "title": "Freelance",
+    "role": "Full Stack & Mobile Developer · Self-employed",
+    "description": "My current role: working directly with clients to design, build and ship web and mobile products, from the first screen to the deployed API.",
+    "highlights": [
+      "MERN and PERN applications",
+      "React Native apps for iOS and Android",
+      "Firebase, Docker and CI/CD setups"
+    ]
+  },
+  {
+    "period": "Jun 2025 — Dec 2025",
+    "location": "Dhaka, Bangladesh",
+    "current": false,
+    "title": "Real Time Solution",
+    "role": "Backend Node.js Developer",
+    "description": "Built and maintained Node.js services and Express APIs for production systems — data modelling, auth flows and endpoints consumed by client-facing interfaces.",
+    "highlights": []
+  },
+  {
+    "period": "Jun 2022 — Jun 2024",
+    "location": "Chittagong, Bangladesh",
+    "current": false,
+    "title": "M/S M Aziz Enterprise",
+    "role": "Computer Operator",
+    "description": "Two years of hands-on computer operations — where my comfort with systems, data entry discipline and software tooling first took shape before moving into development.",
+    "highlights": []
+  }
+]

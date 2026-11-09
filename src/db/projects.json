@@ -30,16 +30,7 @@
       "github": "#",
       "live": "#",
       "category": "web",
-      "techStack": [
-        "React",
-        "Node.js",
-        "Express",
-        "MongoDB",
-        "OpenAI API",
-        "n8n",
-        "Redis",
-        "Docker"
-      ],
+      "techStack": ["React", "Node.js", "Express", "MongoDB", "OpenAI API", "n8n", "Redis", "Docker"],
       "features": [
         "AI-powered product recommendations based on user behavior",
         "Real-time chat support with intelligent bot",
@@ -55,7 +46,30 @@
       "images": [
         "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
         "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop"
-      ]
+      ],
+      "subtitle": "Full-stack AI storefront",
+      "meta": {
+        "role": "Full Stack Developer",
+        "type": "Web Application",
+        "status": "Delivered",
+        "availability": "No public link listed"
+      },
+      "overview": "An end-to-end e-commerce build on the MERN stack with an AI-assisted shopping experience, live chat support and automated inventory workflows.",
+      "myRole": "Owned the build end to end — storefront, admin dashboard, Express APIs, and the AI recommendation layer on top of the OpenAI API.",
+      "problem": "Small stores sell the same way they fight: manually. Recommendations, support replies and stock alerts all needed to run without a person's hand on the wheel.",
+      "built": [
+        "Storefront and admin dashboard",
+        "Express REST API wired to MongoDB",
+        "AI product recommendations with prompt design",
+        "Automated inventory alerts through n8n",
+        "Stripe checkout and order flow"
+      ],
+      "implementation": [
+        "Redis caching keeps the recommendation and chat endpoints responsive under load.",
+        "Docker keeps the storefront, API and automation worker reproducible across machines."
+      ],
+      "outcome": "Delivered the full scope for a client project. I don't have verified usage figures to share, so the honest note is that the build itself is the result.",
+      "related": ["workflow-automation", "saas-platform"]
     },
     {
       "id": "enterprise-pipeline",
@@ -68,16 +82,7 @@
       "github": "#",
       "live": "#",
       "category": "backend",
-      "techStack": [
-        "PostgreSQL",
-        "Express",
-        "React",
-        "TypeScript",
-        "Prisma",
-        "Docker",
-        "Redis",
-        "GraphQL"
-      ],
+      "techStack": ["PostgreSQL", "Express", "React", "TypeScript", "Prisma", "Docker", "Redis", "GraphQL"],
       "features": [
         "Automated ETL pipelines for data transformation",
         "Real-time analytics dashboard with Recharts",
@@ -93,7 +98,29 @@
       "images": [
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop"
-      ]
+      ],
+      "subtitle": "PERN data platform",
+      "meta": {
+        "role": "Backend Developer",
+        "type": "Data Pipeline",
+        "status": "Delivered",
+        "availability": "No public link listed"
+      },
+      "overview": "A PERN data platform ingesting and transforming millions of records daily, with real-time analytics and a typed API on top.",
+      "myRole": "Designed the ETL flows, PostgreSQL schema and Express API layer, plus containerised the whole stack for consistent deploys.",
+      "problem": "The client's data sat in disconnected systems. Every report was a manual copy-paste job and nobody trusted the numbers.",
+      "built": [
+        "Automated ETL pipelines in Node.js",
+        "PostgreSQL schema designed for reporting",
+        "Real-time analytics dashboard",
+        "Typed API with Prisma"
+      ],
+      "implementation": [
+        "Queries are tuned and partitioned so the API stays sub-second under load.",
+        "Row-level access control keeps tenants' records isolated."
+      ],
+      "outcome": "Deployed and running for the client. Verified usage figures aren't public, so the shipped system is what I can honestly show.",
+      "related": ["ai-ecommerce"]
     },
     {
       "id": "workflow-automation",
@@ -106,15 +133,7 @@
       "github": "#",
       "live": "#",
       "category": "ai",
-      "techStack": [
-        "n8n",
-        "Node.js",
-        "TypeScript",
-        "Redis",
-        "PostgreSQL",
-        "Docker",
-        "LangChain"
-      ],
+      "techStack": ["n8n", "Node.js", "TypeScript", "Redis", "PostgreSQL", "Docker", "LangChain"],
       "features": [
         "50+ API integrations with custom connectors",
         "AI agents for intelligent decision making",
@@ -130,7 +149,29 @@
       "images": [
         "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=800&h=600&fit=crop",
         "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=600&fit=crop"
-      ]
+      ],
+      "subtitle": "n8n automation hub",
+      "meta": {
+        "role": "Automation Engineer",
+        "type": "Workflow Platform",
+        "status": "Delivered",
+        "availability": "No public link listed"
+      },
+      "overview": "A central n8n platform orchestrating fifty-plus services, with AI-assisted agents handling decisions and exceptions across team workflows.",
+      "myRole": "Built custom connectors and the orchestration layer, and set up the monitoring that makes the automation legible while it runs.",
+      "problem": "Teams were losing hours every week moving data between tools by hand. No one's job description says 'spreadsheet courier'.",
+      "built": [
+        "Custom API connectors for internal services",
+        "AI decision agents for triage and routing",
+        "Visual workflow builder setup",
+        "Monitoring and alerting for executions"
+      ],
+      "implementation": [
+        "Redis-backed queues smooth out fan-in/fan-out across busy integrations.",
+        "Failure paths are instrumented so broken runs surface before users notice."
+      ],
+      "outcome": "Live across client teams and quietly absorbing the repetitive work. I don't have verified hours-saved figures I can stand behind, so that's the size of it.",
+      "related": ["ai-ecommerce"]
     },
     {
       "id": "cloud-microservices",
@@ -143,16 +184,7 @@
       "github": "#",
       "live": "#",
       "category": "backend",
-      "techStack": [
-        "Docker",
-        "Kubernetes",
-        "Node.js",
-        "PostgreSQL",
-        "AWS",
-        "Terraform",
-        "Prometheus",
-        "Grafana"
-      ],
+      "techStack": ["Docker", "Kubernetes", "Node.js", "PostgreSQL", "AWS", "Terraform", "Prometheus", "Grafana"],
       "features": [
         "Auto-scaling based on traffic patterns",
         "Service mesh with Istio for secure communication",
@@ -168,7 +200,29 @@
       "images": [
         "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=800&h=600&fit=crop",
         "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop"
-      ]
+      ],
+      "subtitle": "Kubernetes setup",
+      "meta": {
+        "role": "DevOps Engineer",
+        "type": "Infrastructure",
+        "status": "Delivered",
+        "availability": "No public link listed"
+      },
+      "overview": "A containerised microservices architecture on Kubernetes with CI/CD, tracing and monitoring wired in from day one.",
+      "myRole": "Set up the services, deployment pipelines and observability, so the client's smaller team can operate it without a dedicated platform engineer.",
+      "problem": "The existing deploy was 'push to the server and hope'. Downtime appeared without warning and rolled back slowly.",
+      "built": [
+        "Dockerised Node.js services",
+        "Kubernetes manifests + HPA scaling",
+        "CI/CD from push to production",
+        "Prometheus + Grafana dashboards"
+      ],
+      "implementation": [
+        "Blue-green deployments keep releases reversible.",
+        "Terraform keeps the infra as code so the setup survives a rebuild."
+      ],
+      "outcome": "Running steadily in production for the client. No verified traffic numbers to quote, so the value is the deploy-pipeline reliability itself.",
+      "related": ["ai-ecommerce", "workflow-automation"]
     },
     {
       "id": "mobile-fitness",
@@ -181,14 +235,7 @@
       "github": "#",
       "live": "#",
       "category": "android",
-      "techStack": [
-        "React Native",
-        "Node.js",
-        "Express",
-        "PostgreSQL",
-        "TensorFlow Lite",
-        "Firebase"
-      ],
+      "techStack": ["React Native", "Node.js", "Express", "PostgreSQL", "TensorFlow Lite", "Firebase"],
       "features": [
         "AI-powered personalized workout plans",
         "Real-time form correction with camera",
@@ -204,7 +251,29 @@
       "images": [
         "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=800&h=600&fit=crop",
         "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop"
-      ]
+      ],
+      "subtitle": "React Native companion",
+      "meta": {
+        "role": "Mobile Developer",
+        "type": "Mobile App",
+        "status": "Delivered",
+        "availability": "No public link listed"
+      },
+      "overview": "A cross-platform fitness companion in React Native with AI-guided workouts, form feedback and nutrition planning on a single codebase.",
+      "myRole": "Built the app from an empty Expo project — screens, offline storage, push flow, and the thin AI layer that connects recommendations.",
+      "problem": "Two separate native apps would have doubled the client's budget. A shared codebase needed to still feel like a real app on both stores.",
+      "built": [
+        "React Native app for iOS and Android",
+        "Offline storage with sync",
+        "Push notification flow",
+        "AI workout-plan suggestions"
+      ],
+      "implementation": [
+        "TensorFlow Lite keeps on-device form checks fast and private.",
+        "Release config and store assets are scripted so future builds are repeatable."
+      ],
+      "outcome": "Delivered to the client. I don't have verified store figures to share, so the honest answer is: the app exists, it works on both platforms.",
+      "related": ["cloud-microservices"]
     },
     {
       "id": "saas-platform",
@@ -217,16 +286,7 @@
       "github": "#",
       "live": "#",
       "category": "web",
-      "techStack": [
-        "React",
-        "Node.js",
-        "Express",
-        "PostgreSQL",
-        "Prisma",
-        "Stripe",
-        "Redis",
-        "Docker"
-      ],
+      "techStack": ["React", "Node.js", "Express", "PostgreSQL", "Prisma", "Stripe", "Redis", "Docker"],
       "features": [
         "Multi-tenant architecture with data isolation",
         "Subscription billing with Stripe integration",
@@ -242,7 +302,29 @@
       "images": [
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
         "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=600&fit=crop"
-      ]
+      ],
+      "subtitle": "Multi-tenant web platform",
+      "meta": {
+        "role": "Full Stack Developer",
+        "type": "Web Application",
+        "status": "Delivered",
+        "availability": "No public link listed"
+      },
+      "overview": "A multi-tenant SaaS in the PERN stack with subscription billing, white-labeling and role-based admin across organizations.",
+      "myRole": "Owned the full loop — tenancy model in PostgreSQL, Express APIs, Stripe billing and the admin interface customers actually touch.",
+      "problem": "Starting a 'SaaS' with separate databases per customer would have created an operations headache. The stack needed proper tenant isolation from the start.",
+      "built": [
+        "Row-level tenant isolation",
+        "Stripe subscription billing",
+        "White-labeling + custom domains",
+        "RBAC admin console"
+      ],
+      "implementation": [
+        "Prisma keeps the schema typed across the API and admin layers.",
+        "Redis caches static tenant data without leaking between orgs."
+      ],
+      "outcome": "Delivered to the client. Verification details are private, so the platform's design itself is what I can stand behind.",
+      "related": ["enterprise-pipeline", "cloud-microservices"]
     }
   ]
 }

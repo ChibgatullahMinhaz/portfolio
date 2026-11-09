@@ -4,13 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowUpRight, Mail } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { InteractiveDotGrid } from "./InteractiveDotGrid";
-
-const marqueeSkills = [
-  "React", "Next.js", "TypeScript", "JavaScript", "Node.js", "Express.js",
-  "MongoDB", "PostgreSQL", "MERN Stack", "PERN Stack", "React Native",
-  "Tailwind CSS", "Redux Toolkit", "Prisma", "Docker", "CI/CD",
-  "Firebase", "Firebase Auth", "Firestore", "Cloud Functions", "Firebase Storage", "Git",
-];
+import { marqueeSkills } from "@/db";
 
 const socials = [
   { icon: FaGithub, href: "https://github.com/ChibgatullahMinhaz", label: "GitHub" },
@@ -66,7 +60,7 @@ export const Hero = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-mono text-xs md:text-sm tracking-wider text-muted-foreground"
           >
-            Dhaka, Bangladesh {time && <span>· {time} GMT+6</span>}
+            Chittagong, Bangladesh {time && <span>· {time} GMT+6</span>}
           </motion.p>
         </div>
 

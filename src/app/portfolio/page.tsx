@@ -2,7 +2,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { ExternalLink,  Filter, X } from "lucide-react";
-import { projects, categories, techFilters } from "@/data/projects";
+import { projects, categories, techFilters } from "@/db";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";

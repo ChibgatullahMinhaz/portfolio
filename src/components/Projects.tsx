@@ -2,7 +2,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ExternalLink, ArrowRight } from "lucide-react";
-import { projects } from "@/data/projects";
+import { projects } from "@/db";
 import { Button } from "./ui/button";
 import { AspectRatio } from "./ui/aspect-ratio";
 import Link from "next/link";

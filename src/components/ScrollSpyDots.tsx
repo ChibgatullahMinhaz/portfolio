@@ -2,16 +2,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const sections = [
-  { id: "intro", label: "01 INTRO" },
-  { id: "services", label: "02 SERVICES" },
-  { id: "skills", label: "03 SKILLS" },
-  { id: "works", label: "04 WORKS" },
-  { id: "experience", label: "05 EXPERIENCE" },
-  { id: "about", label: "06 ABOUT" },
-  { id: "resume", label: "07 RESUME" },
-  { id: "contact", label: "08 CONTACT" },
-];
+import { spySections as sections } from "@/db";
 
 export const ScrollSpyDots = () => {
   const [activeSection, setActiveSection] = useState("intro");
@@ -72,7 +63,7 @@ export const ScrollSpyDots = () => {
   };
 
   return (
-    <div className="fixed right-6 top-1/2 -translate-y-1/2 z-40 hidden lg:flex flex-col items-center">
+    <div className="fixed right-4 top-1/2 -translate-y-1/2 z-40 hidden lg:flex flex-col items-center">
       <div className="glass-card py-4 px-2 rounded-full flex flex-col items-center gap-4 border border-border/50 shadow-lg backdrop-blur-md">
         
         {/* Up Arrow */}

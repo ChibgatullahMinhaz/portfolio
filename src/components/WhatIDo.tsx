@@ -2,66 +2,7 @@
 import { AnimatePresence, motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight, Plus, X } from "lucide-react";
-
-const roles = [
-  {
-    num: "01",
-    title: "Frontend Development",
-    tag: null,
-    description:
-      "The part of a product people see and touch — built to be quick, clear and consistent.",
-    builds: [
-      "Responsive web interfaces",
-      "Reusable component libraries",
-      "Validated forms and dashboards",
-    ],
-    technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Redux Toolkit"],
-    responsibilities: [
-      "Translating Figma designs into responsive, interactive React applications.",
-      "Keeping apps fast with code splitting, memoization and lazy loading.",
-      "Testing components and hooks with React Testing Library.",
-    ],
-    problem: "Slow, inconsistent or duplicated interfaces that are hard to change.",
-  },
-  {
-    num: "02",
-    title: "Full Stack Development",
-    tag: "MERN / PERN",
-    description:
-      "A React interface connected to a Node.js and Express.js API, so the data path makes sense end to end.",
-    builds: [
-      "REST APIs behind React apps",
-      "Feature-complete small products",
-      "PostgreSQL & MongoDB data layers",
-    ],
-    technologies: ["Node.js", "Express.js", "MongoDB", "PostgreSQL", "Prisma"],
-    responsibilities: [
-      "Designing REST APIs with authentication, validation and rate limiting.",
-      "Modeling data in PostgreSQL and MongoDB with Prisma and Mongoose.",
-      "Deploying with Docker and CI/CD pipelines.",
-    ],
-    problem: "Disconnected frontends and backends that break when data flows change.",
-  },
-  {
-    num: "03",
-    title: "Mobile App Development",
-    tag: "React Native",
-    description:
-      "Cross-platform mobile apps that feel native — one codebase, both stores, no compromise on polish.",
-    builds: [
-      "iOS & Android apps with React Native",
-      "Offline-first data sync",
-      "Push notifications & deep linking",
-    ],
-    technologies: ["React Native", "Expo", "Firebase", "TypeScript", "React Navigation"],
-    responsibilities: [
-      "Building cross-platform apps with shared business logic.",
-      "Implementing offline-first storage and background sync.",
-      "Integrating push notifications, deep links and native modules.",
-    ],
-    problem: "Maintaining two separate codebases for iOS and Android.",
-  },
-];
+import { rolesData as roles } from "@/db";
 
 export const WhatIDo = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -232,6 +173,8 @@ export const WhatIDo = () => {
       className="relative"
       style={{ height: `${roles.length * 100}vh` }}
     >
+      {/* Full-width line marking the top of the section */}
+      <div className="absolute top-0 inset-x-0 h-px bg-border" />
       <div
         ref={stickyRef}
         className="sticky top-0 h-screen flex flex-col justify-start overflow-hidden"

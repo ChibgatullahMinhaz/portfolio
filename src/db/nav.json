@@ -1,0 +1,39 @@
+{
+  "navLinks": [
+    { "href": "/", "label": "Home", "num": "01" },
+    { "href": "/services", "label": "Services", "num": "02" },
+    { "href": "/skills", "label": "Skills", "num": "03" },
+    { "href": "/works", "label": "Works", "num": "04" },
+    { "href": "/experience", "label": "Experience", "num": "05" },
+    { "href": "/about", "label": "About", "num": "06" },
+    { "href": "/resume", "label": "Resume", "num": "07" },
+    { "href": "/contact", "label": "Contact", "num": "08" }
+  ],
+  "footerExplore": [
+    { "href": "/#intro", "label": "Home" },
+    { "href": "/about", "label": "About" },
+    { "href": "/services", "label": "Services" },
+    { "href": "/skills", "label": "Skills" },
+    { "href": "/works", "label": "Works" },
+    { "href": "/experience", "label": "Experience" },
+    { "href": "/contact", "label": "Contact" }
+  ],
+  "elsewhere": [
+    { "href": "https://github.com/ChibgatullahMinhaz", "label": "GitHub" },
+    { "href": "https://linkedin.com", "label": "LinkedIn" },
+    { "href": "mailto:chminhaz.info@gmail.com", "label": "Email" }
+  ],
+  "spySections": [
+    { "id": "intro", "label": "01 INTRO" },
+    { "id": "about", "label": "02 ABOUT" },
+    { "id": "services", "label": "03 WHAT I DO" },
+    { "id": "philosophy", "label": "04 PHILOSOPHY" },
+    { "id": "ecosystem", "label": "05 ECOSYSTEM" },
+    { "id": "selected-work", "label": "06 WORK" },
+    { "id": "experience", "label": "07 EXPERIENCE" },
+    { "id": "process", "label": "08 PROCESS" },
+    { "id": "current-focus", "label": "09 NOW" },
+    { "id": "why-work", "label": "10 WHY WORK" },
+    { "id": "contact", "label": "11 CONTACT" }
+  ]
+}

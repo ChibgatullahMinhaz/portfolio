@@ -1,0 +1,11 @@
+{
+  "snapshot": [
+    { "label": "Name", "value": "Chibgatullah Minhaz" },
+    { "label": "Role", "value": "Freelance Full Stack & Mobile Developer" },
+    { "label": "Since", "value": "2025 — Present" },
+    { "label": "Based in", "value": "Chittagong, Bangladesh" },
+    { "label": "Core stack", "value": "MERN / PERN · React Native · Firebase" },
+    { "label": "Also", "value": "Docker, CI/CD, AI integration" },
+    { "label": "Status", "value": "Open to new projects" }
+  ]
+}

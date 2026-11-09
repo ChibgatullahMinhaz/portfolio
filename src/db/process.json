@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Discover",
+    "description": "Talk through the goal, the users and the deadline, then agree on a scope that is small enough to ship."
+  },
+  {
+    "title": "Design",
+    "description": "Sketch the screens and the data model together, so surprises show up on paper instead of in production."
+  },
+  {
+    "title": "Build",
+    "description": "Work in short iterations with a working preview, using reusable components and a typed API from the start."
+  },
+  {
+    "title": "Launch",
+    "description": "Test the critical flows, set up Docker and CI/CD, and deploy so every later release is one merge away."
+  },
+  {
+    "title": "Support",
+    "description": "Stay available after launch for fixes, handover notes and the next round of improvements."
+  }
+]

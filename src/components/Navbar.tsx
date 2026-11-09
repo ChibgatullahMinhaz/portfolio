@@ -5,22 +5,15 @@ import { Menu } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link"; 
 import { usePathname } from "next/navigation";
+import { navLinks } from "@/db";
 
-const navLinks = [
-  { href: "#intro", label: "Home", num: "01" },
-  { href: "#services", label: "Services", num: "02" },
-  { href: "#skills", label: "Skills", num: "03" },
-  { href: "#projects", label: "Works", num: "04" },
-  { href: "#experience", label: "Experience", num: "05" },
-  { href: "#about", label: "About", num: "06" },
-  { href: "#resume", label: "Resume", num: "07" },
-  { href: "#contact", label: "Contact", num: "08" },
-];
+const linkHref = (href: string) => (href.startsWith("#") ? "/" + href : href);
+
+const MotionLink = motion(Link);
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = usePathname();
-  const isHomePage = location === "/";
 
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -72,22 +65,27 @@ export const Navbar = () => {
 
           {/* Desktop Navigation — right pill */}
           <div className="hidden md:flex items-center gap-1 glass-card rounded-full px-2 py-1.5">
-            {navLinks.map((link, index) => (
-              <motion.a
-                key={link.href}
-                href={link.href.startsWith("#") && !isHomePage ? "/" + link.href : link.href}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-                  index === 0
-                    ? "bg-primary text-primary-foreground"
-                    : "text-muted-foreground hover:text-foreground hover:bg-secondary"
-                }`}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 * index }}
-              >
-                {link.label}
-              </motion.a>
-            ))}
+
+            {navLinks.map((link, index) => {
+              const href = linkHref(link.href);
+              const isActive = location === href;
+              return (
+                <MotionLink
+                  key={link.href}
+                  href={href}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                    isActive
+                      ? "bg-primary text-primary-foreground"
+                      : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                  }`}
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1 * index }}
+                >
+                  {link.label}
+                </MotionLink>
+              );
+            })}
             <div className="pl-2 pr-1">
               <ThemeToggle />
             </div>
@@ -146,20 +144,26 @@ export const Navbar = () => {
               exit="exit"
               className="flex flex-col gap-1 my-auto py-8 w-full"
             >
-              {navLinks.map((link) => (
-                <motion.div key={link.href} variants={itemVariants} className="w-fit">
-                  <a
-                    href={link.href.startsWith("#") && !isHomePage ? "/" + link.href : link.href}
-                    onClick={() => setIsOpen(false)}
-                    className="text-5xl sm:text-6xl font-bold tracking-tight leading-[1.1] text-foreground hover:text-primary active:text-primary transition-colors flex items-start gap-2"
-                  >
-                    <span>{link.label}</span>
-                    <span className="text-sm sm:text-base font-medium text-primary mt-1">
-                      {link.num}
-                    </span>
-                  </a>
-                </motion.div>
-              ))}
+              {navLinks.map((link) => {
+                const href = linkHref(link.href);
+                const isActive = location === href;
+                return (
+                  <motion.div key={link.href} variants={itemVariants} className="w-fit">
+                    <Link
+                      href={href}
+                      onClick={() => setIsOpen(false)}
+                      className={`text-5xl sm:text-6xl font-bold tracking-tight leading-[1.1] transition-colors flex items-start gap-2 ${
+                        isActive ? "text-primary" : "text-foreground hover:text-primary active:text-primary"
+                      }`}
+                    >
+                      <span>{link.label}</span>
+                      <span className="text-sm sm:text-base font-medium text-primary mt-1">
+                        {link.num}
+                      </span>
+                    </Link>
+                  </motion.div>
+                );
+              })}
             </motion.div>
 
             {/* Footer / Socials inside overlay */}
