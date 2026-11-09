@@ -9,7 +9,7 @@ import { navLinks } from "@/db";
 
 const linkHref = (href: string) => (href.startsWith("#") ? "/" + href : href);
 
-const MotionLink = motion(Link);
+const MotionLink = motion.create(Link);
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -64,7 +64,7 @@ export const Navbar = () => {
           </motion.div>
 
           {/* Desktop Navigation — right pill */}
-          <div className="hidden md:flex items-center gap-1 glass-card rounded-full px-2 py-1.5">
+          <div className="hidden lg:flex items-center gap-1 glass-card rounded-full px-2 py-1.5">
 
             {navLinks.map((link, index) => {
               const href = linkHref(link.href);
@@ -73,7 +73,7 @@ export const Navbar = () => {
                 <MotionLink
                   key={link.href}
                   href={href}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                  className={`px-3 xl:px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
                     isActive
                       ? "bg-primary text-primary-foreground"
                       : "text-muted-foreground hover:text-foreground hover:bg-secondary"
@@ -91,8 +91,8 @@ export const Navbar = () => {
             </div>
           </div>
 
-          {/* Mobile / SM Menu Trigger Button */}
-          <div className="md:hidden flex items-center gap-3">
+          {/* Mobile / Tablet Menu Trigger Button */}
+          <div className="lg:hidden flex items-center gap-3">
             <ThemeToggle />
             <button
               onClick={() => setIsOpen(true)}
@@ -112,7 +112,7 @@ export const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed inset-0 z-[100] bg-background text-foreground flex flex-col justify-between px-6 py-5 overflow-y-auto md:hidden"
+            className="fixed inset-0 z-[100] bg-background text-foreground flex flex-col justify-between px-6 py-5 overflow-y-auto lg:hidden"
           >
             {/* Top Bar inside Overlay */}
             <div className="flex items-center justify-between w-full">
@@ -173,7 +173,7 @@ export const Navbar = () => {
                 <a href="https://github.com/ChibgatullahMinhaz" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">
                   GitHub
                 </a>
-                <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">
+                <a href="https://www.linkedin.com/in/chibgatullahminhaz" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">
                   LinkedIn
                 </a>
                 <a href="mailto:chminhaz.info@gmail.com" className="hover:text-primary transition-colors">

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { About } from "@/components/About";
 import { CTA } from "@/components/CTA";
 import { CurrentFocus } from "@/components/CurrentFocus";
@@ -13,6 +14,12 @@ import { ScrollSpyDots } from "@/components/ScrollSpyDots";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { WhatIDo } from "@/components/WhatIDo";
 import { WhyWorkWithMe } from "@/components/WhyWorkWithMe";
+
+// Title, description, and Open Graph inherit from the root layout;
+// only the canonical URL is route-specific here.
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default function Home() {
   return (
