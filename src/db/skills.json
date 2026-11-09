@@ -1,16 +1,52 @@
 {
   "marquee": [
-    "React", "Next.js", "TypeScript", "JavaScript", "Node.js", "Express.js",
-    "MongoDB", "PostgreSQL", "MERN Stack", "PERN Stack", "React Native",
-    "Tailwind CSS", "Redux Toolkit", "Prisma", "Docker", "CI/CD",
-    "Firebase", "Firebase Auth", "Firestore", "Cloud Functions", "Firebase Storage", "Git"
+    "React",
+    "Next.js",
+    "TypeScript",
+    "JavaScript",
+    "React Native",
+    "Tailwind CSS",
+    "Redux Toolkit",
+    "TanStack Query",
+    "Framer Motion",
+    "Shadcn UI",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "PostgreSQL",
+    "Prisma",
+    "REST API",
+    "MERN Stack",
+    "PERN Stack",
+    "Firebase",
+    "Firebase Auth",
+    "Firestore",
+    "Cloud Functions",
+    "Firebase Storage",
+    "Supabase",
+    "Row Level Security (RLS)",
+    "Edge Functions",
+
+    "Docker",
+    "CI/CD",
+    "Git",
+    "WSL",
+    "Vercel",
+    "vps"
   ],
   "groups": [
     {
       "num": "01",
       "title": "Frontend Core",
       "tagline": "The layer users actually touch.",
-      "items": ["React", "Next.js", "TypeScript", "JavaScript (ES6+)", "HTML5", "CSS3"],
+      "items": [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "JavaScript (ES6+)",
+        "HTML5",
+        "CSS3"
+      ],
       "unlocks": "Interactive, type-safe web interfaces that hold up under refactoring — component boundaries drawn where they belong, not where a tutorial stopped.",
       "proof": "Most of this portfolio."
     },
@@ -18,7 +54,13 @@
       "num": "02",
       "title": "UI & Styling",
       "tagline": "Looks that load fast and hold together.",
-      "items": ["Tailwind CSS", "Framer Motion", "SCSS", "Responsive layouts", "Design systems"],
+      "items": [
+        "Tailwind CSS",
+        "Framer Motion",
+        "SCSS",
+        "Responsive layouts",
+        "Design systems"
+      ],
       "unlocks": "Mobile-first layouts that stay consistent when the content team keeps adding words. Animation that adds context, not noise.",
       "proof": "Every screen on this site."
     },
@@ -26,7 +68,14 @@
       "num": "03",
       "title": "Backend & Databases",
       "tagline": "The part underneath that makes it real.",
-      "items": ["Node.js", "Express", "PostgreSQL", "MongoDB", "Prisma", "REST APIs"],
+      "items": [
+        "Node.js",
+        "Express",
+        "PostgreSQL",
+        "MongoDB",
+        "Prisma",
+        "REST APIs"
+      ],
       "unlocks": "APIs designed for the frontend that consumes them — schema first, migrations committed, errors that mean something when they hit the client.",
       "proof": "ERP, admin panels, storefront backends."
     },
@@ -34,7 +83,14 @@
       "num": "04",
       "title": "Firebase Stack",
       "tagline": "Serverless infrastructure for speed.",
-      "items": ["Firebase Auth", "Firestore", "Cloud Functions", "FCM", "Storage", "Realtime rules"],
+      "items": [
+        "Firebase Auth",
+        "Firestore",
+        "Cloud Functions",
+        "FCM",
+        "Storage",
+        "Realtime rules"
+      ],
       "unlocks": "Startups and MVPs can skip the DevOps budget — auth, data and logic as platform primitives. Security rules written before the first user signs up.",
       "proof": "Chat, notifications and storage pipelines in live apps."
     },
@@ -42,7 +98,13 @@
       "num": "05",
       "title": "Mobile Development",
       "tagline": "One codebase, both app stores.",
-      "items": ["React Native", "Expo", "Navigation", "AsyncStorage", "Native modules basics"],
+      "items": [
+        "React Native",
+        "Expo",
+        "Navigation",
+        "AsyncStorage",
+        "Native modules basics"
+      ],
       "unlocks": "Apps that share logic with their web counterpart. Push notifications, offline storage and release builds configured from the start, not hacked in later.",
       "proof": "Companion apps for existing products."
     },
@@ -50,7 +112,14 @@
       "num": "06",
       "title": "DevOps & Shipping",
       "tagline": "The unglamorous layer underneath.",
-      "items": ["Docker", "GitHub Actions", "Nginx", "VPS setup", "CI/CD", "Environment management"],
+      "items": [
+        "Docker",
+        "GitHub Actions",
+        "Nginx",
+        "VPS setup",
+        "CI/CD",
+        "Environment management"
+      ],
       "unlocks": "Releases that don't depend on one developer's laptop. Push to main, watch it deploy — with secrets handled properly and rollback within reach.",
       "proof": "Pipelines across client work and side projects."
     },
@@ -58,7 +127,13 @@
       "num": "07",
       "title": "AI Integration",
       "tagline": "Application-layer AI, not mysticism.",
-      "items": ["OpenAI API", "Prompt design", "Streaming UIs", "RAG basics", "Vector search"],
+      "items": [
+        "OpenAI API",
+        "Prompt design",
+        "Streaming UIs",
+        "RAG basics",
+        "Vector search"
+      ],
       "unlocks": "Chat assistants, smart summaries and suggestion features wired into real interfaces. Prompts as versioned code, cost tracked like any other dependency.",
       "proof": "Project work in this year alone."
     }
