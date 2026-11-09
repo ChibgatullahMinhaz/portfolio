@@ -93,6 +93,8 @@ const Carousel = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivEl
         return;
       }
 
+      // Syncs initial state from embla; later updates arrive via "select"/"reInit" events.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       onSelect(api);
       api.on("reInit", onSelect);
       api.on("select", onSelect);

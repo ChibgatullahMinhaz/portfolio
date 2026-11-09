@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { Send, Mail, MapPin, Phone } from "lucide-react";
@@ -47,7 +47,7 @@ export const Contact = () => {
               transition={{ delay: 0.2 }}
               className="text-3xl md:text-5xl font-bold mb-6"
             >
-              Let's Build Something{" "}
+              Let&apos;s Build Something{" "}
               <span className="gradient-text">Amazing</span>
             </motion.h2>
             <motion.p
@@ -56,7 +56,7 @@ export const Contact = () => {
               transition={{ delay: 0.3 }}
               className="text-lg text-muted-foreground max-w-2xl mx-auto"
             >
-              Have a project in mind or just want to chat? I'd love to hear from you!
+              Have a project in mind or just want to chat? I&apos;d love to hear from you!
             </motion.p>
           </div>
 
@@ -93,8 +93,8 @@ export const Contact = () => {
                 className="glass-card rounded-2xl p-6 mt-8"
               >
                 <p className="text-muted-foreground leading-relaxed">
-                  I'm currently open for freelance projects and full-time opportunities. 
-                  Let's discuss how I can help bring your ideas to life!
+                  I&apos;m currently open for freelance projects and full-time opportunities. 
+                  Let&apos;s discuss how I can help bring your ideas to life!
                 </p>
               </motion.div>
             </motion.div>

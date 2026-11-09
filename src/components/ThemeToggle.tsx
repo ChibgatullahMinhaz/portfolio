@@ -1,14 +1,16 @@
 import { Moon, Sun } from "lucide-react";
 import { motion } from "framer-motion";
 import { useTheme } from "@/hooks/useTheme";
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
+
+const emptySubscribe = () => () => {};
+const getClientSnapshot = () => true;
+const getServerSnapshot = () => false;
+
 export const ThemeToggle = () => {
   const { theme, toggleTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
+  const mounted = useSyncExternalStore(emptySubscribe, getClientSnapshot, getServerSnapshot);
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
   if (!mounted) {
     return (
       <div className="relative p-2 rounded-full bg-secondary h-[40px] w-[40px]" />

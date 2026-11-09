@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useCallback, useRef } from "react";
+import { useEffect, useState, useCallback, useRef, useSyncExternalStore } from "react";
 import { motion, useMotionValue, useSpring, AnimatePresence } from "framer-motion";
 
 interface TrailDot {
@@ -8,6 +8,19 @@ interface TrailDot {
   x: number;
   y: number;
 }
+
+const subscribePointerChange = (onStoreChange: () => void) => {
+  const mql = window.matchMedia("(pointer: coarse)");
+  mql.addEventListener("change", onStoreChange);
+  return () => mql.removeEventListener("change", onStoreChange);
+};
+
+const getIsTouchDevice = () =>
+  "ontouchstart" in window ||
+  navigator.maxTouchPoints > 0 ||
+  window.matchMedia("(pointer: coarse)").matches;
+
+const getServerIsTouchDevice = () => false;
 
 export function CustomCursor() {
   const [isVisible, setIsVisible] = useState(false);
@@ -17,7 +30,11 @@ export function CustomCursor() {
   const [trail, setTrail] = useState<TrailDot[]>([]);
   const trailId = useRef(0);
   const lastTrailTime = useRef(0);
-  const [isTouchDevice, setIsTouchDevice] = useState(false);
+  const isTouchDevice = useSyncExternalStore(
+    subscribePointerChange,
+    getIsTouchDevice,
+    getServerIsTouchDevice,
+  );
 
   const cursorX = useMotionValue(0);
   const cursorY = useMotionValue(0);
@@ -42,14 +59,6 @@ export function CustomCursor() {
     },
     [cursorX, cursorY, isVisible]
   );
-
-  useEffect(() => {
-    const hasTouch =
-      "ontouchstart" in window ||
-      navigator.maxTouchPoints > 0 ||
-      window.matchMedia("(pointer: coarse)").matches;
-    setIsTouchDevice(hasTouch);
-  }, []);
 
   useEffect(() => {
     if (isTouchDevice) return;
@@ -131,7 +140,7 @@ export function CustomCursor() {
 
       {/* Trail dots */}
       <AnimatePresence>
-        {trail.map((dot, i) => (
+        {trail.map((dot) => (
           <motion.div
             key={dot.id}
             initial={{ opacity: 0.6, scale: 1 }}

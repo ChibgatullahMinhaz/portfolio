@@ -84,7 +84,7 @@ export const Projects = () => {
             animate={isInView ? "visible" : "hidden"}
             className="grid md:grid-cols-2 gap-8"
           >
-            {featuredProjects.map((project, index) => {
+            {featuredProjects.map((project) => {
               const IconComponent = project.icon;
               return (
                 <motion.div

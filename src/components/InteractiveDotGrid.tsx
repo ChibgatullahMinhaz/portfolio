@@ -114,7 +114,7 @@ export function InteractiveDotGrid() {
     canvas.addEventListener("mousemove", handleMouseMove);
     canvas.addEventListener("mouseleave", handleMouseLeave);
 
-    const animate = (time: number) => {
+    const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       const isDark = isDarkRef.current;
