@@ -126,7 +126,7 @@ export const SelectedWork = () => {
 
         <div className="flex flex-wrap items-center gap-x-10 gap-y-4 mt-12">
           {[
-            { label: "Explore all works", href: "/portfolio" },
+            { label: "Explore all works", href: "/works" },
             { label: "Get in touch about a project", href: "#contact" },
           ].map((link) => (
             <Link key={link.label} href={link.href} className="group inline-flex items-center gap-3 text-sm font-medium">

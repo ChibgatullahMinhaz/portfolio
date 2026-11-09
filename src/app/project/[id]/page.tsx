@@ -57,7 +57,7 @@ const ProjectDetail = () => {
             This project doesn&apos;t exist.
           </h1>
           <Link
-            href="/portfolio"
+            href="/works"
             className="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all"
           >
             <ArrowLeft size={16} />
@@ -96,7 +96,7 @@ const ProjectDetail = () => {
             </Link>
             <span>/</span>
             <Link
-              href="/portfolio"
+              href="/works"
               className="hover:text-primary transition-colors"
             >
               Projects
@@ -356,7 +356,7 @@ const ProjectDetail = () => {
                   </h2>
                 </div>
                 <Link
-                  href="/portfolio"
+                  href="/works"
                   className="hidden md:inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
                   All projects
@@ -440,7 +440,7 @@ const ProjectDetail = () => {
                 <ArrowUpRight size={16} />
               </Link>
               <Link
-                href="/portfolio"
+                href="/works"
                 className="inline-flex items-center gap-2 rounded-full border border-border/60 px-7 py-3.5 text-sm font-semibold hover:border-primary hover:text-primary transition-colors"
               >
                 View all projects

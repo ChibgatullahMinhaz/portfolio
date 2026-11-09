@@ -199,7 +199,7 @@ export const Projects = () => {
             transition={{ delay: 0.8 }}
             className="text-center mt-12"
           >
-            <Link href="/portfolio">
+            <Link href="/works">
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

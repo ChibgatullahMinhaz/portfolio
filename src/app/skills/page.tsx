@@ -175,7 +175,7 @@ const SkillsPage = () => {
             className="mt-8"
           >
             <Link
-              href="/portfolio"
+              href="/works"
               className="group inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-all hover:brightness-110"
             >
               Explore projects

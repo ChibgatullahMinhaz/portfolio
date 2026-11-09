@@ -166,7 +166,7 @@ const ServicesPage = () => {
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
             </Link>
             <Link
-              href="/portfolio"
+              href="/works"
               className="inline-flex items-center gap-2 rounded-full border border-border px-8 py-4 text-sm font-medium text-muted-foreground transition-all hover:border-primary hover:text-primary"
             >
               Browse the work

@@ -335,7 +335,7 @@ const AboutPage = () => {
               Contact me
             </Link>
             <Link
-              href="/portfolio"
+              href="/works"
               className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
             >
               View projects
