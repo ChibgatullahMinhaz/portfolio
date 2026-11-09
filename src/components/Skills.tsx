@@ -55,13 +55,12 @@ export const Skills = () => {
     <section id="skills" className="py-24 md:py-32 relative overflow-hidden bg-secondary/30">
       <div className="floating-orb w-80 h-80 bg-primary/30 -bottom-40 -left-40" />
       
-      <div className="container px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
-          className="max-w-6xl mx-auto"
         >
           <div className="text-center mb-16">
             <motion.span

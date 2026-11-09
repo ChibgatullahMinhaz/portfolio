@@ -12,8 +12,8 @@ const socialLinks = [
 export const Footer = () => {
   return (
     <footer className="py-12 border-t border-border">
-      <div className="container px-6">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

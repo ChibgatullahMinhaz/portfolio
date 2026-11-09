@@ -81,13 +81,12 @@ export const Services = () => {
       <div className="floating-orb w-80 h-80 bg-accent/30 bottom-0 left-0" />
       <div className="floating-orb w-64 h-64 bg-primary/20 top-1/4 right-0" />
       
-      <div className="container px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
-          className="max-w-6xl mx-auto"
         >
           <div className="text-center mb-16">
             <motion.span

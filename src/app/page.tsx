@@ -6,19 +6,19 @@ import { Navbar } from "@/components/Navbar";
 import { Projects } from "@/components/Projects";
 import { ScrollSpyDots } from "@/components/ScrollSpyDots";
 import { ScrollToTop } from "@/components/ScrollToTop";
-import { Services } from "@/components/Services";
 import { Skills } from "@/components/Skills";
+import { WhatIDo } from "@/components/WhatIDo";
 
 export default function Home() {
   return (
     <>
-      <div className="min-h-screen bg-background overflow-x-hidden">
+      <div className="min-h-screen bg-background overflow-x-clip">
         <ScrollSpyDots />
         <Navbar />
         <Hero />
         <About />
+        <WhatIDo />
         <Skills />
-        <Services />
         <Projects />
         <Contact />
         <Footer />
